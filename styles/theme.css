@@ -1,0 +1,43 @@
+/* Shared Theme Variables - Dark Mode */
+:root {
+    /* Primary Colors */
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary-color: #10b981;
+    
+    /* Text Colors */
+    --text-dark: #e5e7eb;
+    --text-light: #9ca3af;
+    
+    /* Background Colors */
+    --bg-light: #1f2937;
+    --bg-white: #111827;
+    --bg-darker: #0f172a;
+    --bg-hero: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    
+    /* Border & Shadow */
+    --border-color: #374151;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+    
+    /* Transitions */
+    --transition: all 0.3s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-darker);
+}

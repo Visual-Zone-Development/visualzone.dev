@@ -1,9 +1,9 @@
 /* Shared Theme Variables - Dark Mode */
 :root {
     /* Primary Colors */
-    --primary-color: #3b82f6;
-    --primary-dark: #2563eb;
-    --secondary-color: #10b981;
+    --primary-color: #0A9AE4;
+    --primary-dark: #0779B8;
+    --secondary-color: #28DA6A;
     
     /* Text Colors */
     --text-dark: #e5e7eb;

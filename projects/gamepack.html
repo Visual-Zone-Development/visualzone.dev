@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePack - Online Multiplayer Party Games | Visual Zone Development</title>
+    <meta name="description" content="GamePack is an online platform for friends and family to play party games together. Features multiplayer games, video chat, and no sign-up required.">
+    <link rel="stylesheet" href="../styles/theme.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/project.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.svg" alt="Visual Zone Development Logo" class="logo-image">
+                <span class="logo-text">Visual Zone</span>
+            </a>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">← Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-icon-large">
+                    <img src="../assets/projects/gamepack-icon.png" alt="GamePack icon">
+                </div>
+                <h1 class="project-hero-title">GamePack</h1>
+                <p class="project-hero-tagline">Be Social at a Distance</p>
+                <div class="project-hero-tags">
+                    <span class="tag">Web Application</span>
+                    <span class="tag">Multiplayer Games</span>
+                    <span class="tag">Real-time</span>
+                    <span class="tag">Social</span>
+                </div>
+                <div class="project-hero-actions">
+                    <a href="https://www.gamepack.app" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Visit GamePack
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Overview</h2>
+            <div class="project-content">
+                <p class="lead">
+                    GamePack is an online platform that makes it easy for friends and family to stay connected 
+                    through fun multiplayer party games. Built during the pandemic to help people stay social 
+                    at a distance, it offers a seamless experience with no sign-up required.
+                </p>
+                <p>
+                    Whether you're hosting a virtual game night, looking to play with friends across the globe, 
+                    or just want a casual gaming session, GamePack provides an accessible and engaging platform 
+                    with integrated video chat and a variety of popular party games.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Games & Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Categories</h3>
+                    <p>Race against the clock to name items in various categories. Perfect for quick thinking and competitive fun!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💭</div>
+                    <h3>Word Play</h3>
+                    <p>A Codenames-style game where teams compete to identify their words using creative one-word clues.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Draw Together</h3>
+                    <p>Collaborate on a shared canvas with friends. Perfect for creative expression and casual fun.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✏️</div>
+                    <h3>Guess A Sketch</h3>
+                    <p>One player draws while others guess what they're sketching. A classic game with a modern twist!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Word Chain</h3>
+                    <p>Build words off previous words in a chain. Test your vocabulary and strategic thinking.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❓</div>
+                    <h3>This or That</h3>
+                    <p>Choose between two options and see what your friends pick. Great for sparking conversations!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♟️</div>
+                    <h3>Chess</h3>
+                    <p>Classic chess with a friend. Play the timeless strategy game in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h3>Video Chat</h3>
+                    <p>Integrated webcam support so you can see and hear your friends while you play.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Technical Implementation</h2>
+            <div class="tech-details">
+                <div class="tech-detail">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>Angular (TypeScript)</li>
+                        <li>Angular Material UI</li>
+                        <li>RxJS for reactive programming</li>
+                        <li>Canvas API for drawing games</li>
+                        <li>WebRTC for video chat</li>
+                    </ul>
+                </div>
+                <div class="tech-detail">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js & Express</li>
+                        <li>Socket.io for real-time communication</li>
+                        <li>MongoDB for data persistence</li>
+                        <li>JWT authentication</li>
+                        <li>Stripe payment integration</li>
+                    </ul>
+                </div>
+                <div class="tech-detail">
+                    <h3>Infrastructure</h3>
+                    <ul>
+                        <li>Docker & Docker Compose</li>
+                        <li>Heroku deployment</li>
+                        <li>MongoDB Atlas</li>
+                        <li>Automated database seeding</li>
+                        <li>Hot-reload development setup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Platform Features</h2>
+            <div class="project-content">
+                <h3 style="margin-top: 0;">Real-Time Multiplayer</h3>
+                <p>
+                    Built on Socket.io for instant, synchronized gameplay. All players see updates in real-time, 
+                    making the experience smooth and responsive even with multiple participants.
+                </p>
+
+                <h3>No Sign-Up Required</h3>
+                <p>
+                    Create a room instantly and share the code with friends. Optional account creation 
+                    available for those who want to save progress and access premium features.
+                </p>
+
+                <h3>Room-Based Architecture</h3>
+                <p>
+                    Each game session exists in its own room with a unique code. Supports public and private 
+                    rooms, host controls, and easy player management.
+                </p>
+
+                <h3>Integrated Video Chat</h3>
+                <p>
+                    WebRTC-powered video chat lets you see and hear your friends while playing. 
+                    Optional feature that can be toggled on or off per room.
+                </p>
+
+                <h3>Premium Content</h3>
+                <p>
+                    Optional store with additional game categories and features. Stripe integration 
+                    for secure payments and account-based purchases.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links -->
+    <section class="project-section" id="links">
+        <div class="container">
+            <h2 class="section-title">Play Now</h2>
+            <div class="download-options">
+                <div class="download-card">
+                    <h3>🎮 Launch GamePack</h3>
+                    <p>Visit GamePack and start playing with your friends instantly. No installation or sign-up required!</p>
+                    <a href="https://www.gamepack.app" class="btn btn-primary" target="_blank" rel="noopener">
+                        Play GamePack
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Visual Zone Development. All rights reserved.</p>
+            <p class="footer-tagline">Building the future, one line of code at a time.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

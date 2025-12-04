@@ -1,9 +1,12 @@
 /* Shared Theme Variables - Dark Mode */
 :root {
-    /* Primary Colors */
-    --primary-color: #3b82f6;
-    --primary-dark: #2563eb;
-    --secondary-color: #10b981;
+    /* Primary Colors (Blue primary, Purple secondary) */
+    --primary-color: #0A9AE4;      /* Bright brand blue */
+    --primary-dark: #0779B8;       /* Darker blue for hover/active */
+    --secondary-color: #6D28D9;    /* Supporting purple accent */
+    --secondary-dark: #4C1D95;     /* Dark purple for hover/active */
+    /* Hero gradient: blue focus transitioning into purple then deep background */
+    --bg-hero: linear-gradient(135deg, #0A3E78 0%, #0A9AE4 35%, #4C1D95 70%, #0f172a 100%);
     
     /* Text Colors */
     --text-dark: #e5e7eb;

@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitFlex - Browser Extension for GitHub | Visual Zone Development</title>
     <meta name="description" content="GitFlex is a powerful browser extension that enhances GitHub with quality-of-life improvements and productivity features.">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../styles/theme.css">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/project.css">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/theme.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/project.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <a href="../index.html" class="logo">
-                <img src="../images/vz-logo-pb.png" alt="Visual Zone Development Logo" class="logo-image">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/vz-logo-pb.png" alt="Visual Zone Development Logo" class="logo-image">
                 <span class="logo-text">Visual Zone Development</span>
             </a>
             <nav class="nav">
-                <a href="../index.html" class="nav-link">← Back to Home</a>
+                <a href="../../index.html" class="nav-link">← Back to Home</a>
             </nav>
         </div>
     </header>
@@ -29,7 +29,7 @@
         <div class="container">
             <div class="project-hero-content">
                 <div class="project-icon-large">
-                    <img src="../images/gitflex/gitflex-icon.png" alt="GitFlex icon">
+                    <img src="../../images/gitflex/gitflex-icon.png" alt="GitFlex icon">
                 </div>
                 <h1 class="project-hero-title">GitFlex</h1>
                 <p class="project-hero-tagline">Supercharge Your GitHub Workflow</p>
@@ -73,6 +73,10 @@
     <section class="project-section bg-light">
         <div class="container">
             <h2 class="section-title">Key Features</h2>
+            <div style="text-align: center; margin-bottom: 24px;">
+                <a href="./features/" class="btn btn-primary">View Complete Features Guide</a>
+                <a href="./changelog/" class="btn btn-secondary">View Full Changelog</a>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
@@ -114,23 +118,23 @@
             <h2 class="section-title">Screenshots</h2>
             <div class="screenshots-grid">
                 <div class="screenshot" data-image-index="0">
-                    <img src="../images/gitflex/gitflex-info.png" alt="GitFlex settings">
+                    <img src="../../images/gitflex/gitflex-info.png" alt="GitFlex settings">
                     <p class="screenshot-caption">More Information at a Glance</p>
                 </div>
                 <div class="screenshot" data-image-index="1">
-                    <img src="../images/gitflex/gitflex-work-efficiently.png" alt="GitFlex PR list view">
+                    <img src="../../images/gitflex/gitflex-work-efficiently.png" alt="GitFlex PR list view">
                     <p class="screenshot-caption">Work More Efficiently</p>
                 </div>
                 <div class="screenshot" data-image-index="2">
-                    <img src="../images/gitflex/gitflex-comments.png" alt="GitFlex issue view">
+                    <img src="../../images/gitflex/gitflex-comments.png" alt="GitFlex issue view">
                     <p class="screenshot-caption">Easier Comment Creation</p>
                 </div>
                 <div class="screenshot" data-screenshot-index="3">
-                    <img src="../images/gitflex/gitflex-settings.png" alt="GitFlex settings">
+                    <img src="../../images/gitflex/gitflex-settings.png" alt="GitFlex settings">
                     <p class="screenshot-caption">Configurable to Your Needs</p>
                 </div>
                 <div class="screenshot" data-screenshot-index="4">
-                    <img src="../images/gitflex/gitflex-unobtrusive.png" alt="GitFlex settings">
+                    <img src="../../images/gitflex/gitflex-unobtrusive.png" alt="GitFlex settings">
                     <p class="screenshot-caption">Unobtrusive by Design</p>
                 </div>
             </div>
@@ -251,16 +255,16 @@
         </div>
     </div>
 
-    <script src="../script.js"></script>
-    <script src="../scripts/image-modal.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../../scripts/image-modal.js"></script>
     <script>
         // Initialize screenshot modal
         const screenshotImages = [
-            { src: '../images/gitflex/gitflex-info.png', caption: 'More Information at a Glance' },
-            { src: '../images/gitflex/gitflex-work-efficiently.png', caption: 'Work More Efficiently' },
-            { src: '../images/gitflex/gitflex-comments.png', caption: 'Easier Comment Creation' },
-            { src: '../images/gitflex/gitflex-settings.png', caption: 'Configurable to Your Needs' },
-            { src: '../images/gitflex/gitflex-unobtrusive.png', caption: 'Unobtrusive by Design' }
+            { src: '../../images/gitflex/gitflex-info.png', caption: 'More Information at a Glance' },
+            { src: '../../images/gitflex/gitflex-work-efficiently.png', caption: 'Work More Efficiently' },
+            { src: '../../images/gitflex/gitflex-comments.png', caption: 'Easier Comment Creation' },
+            { src: '../../images/gitflex/gitflex-settings.png', caption: 'Configurable to Your Needs' },
+            { src: '../../images/gitflex/gitflex-unobtrusive.png', caption: 'Unobtrusive by Design' }
         ];
 
         initImageModal('.screenshots-grid', '.screenshot', screenshotImages);

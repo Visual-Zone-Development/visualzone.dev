@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitFlex Changelog - Version History | Visual Zone Development</title>
+    <meta name="description" content="Track all updates and improvements to the GitFlex browser extension for GitHub.">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/theme.css">
+    <link rel="stylesheet" href="../../../styles/styles.css">
+    <link rel="stylesheet" href="../../../styles/project.css">
+    <style>
+        .version-section {
+            margin-bottom: 40px;
+            padding: 24px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .version-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .version-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 16px;
+        }
+        .version-date {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .changes-category {
+            margin-bottom: 24px;
+        }
+        .changes-category:last-child {
+            margin-bottom: 0;
+        }
+        .category-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .category-title.added {
+            color: #3fb950;
+        }
+        .category-title.changed {
+            color: #58a6ff;
+        }
+        .category-title.fixed {
+            color: #f85149;
+        }
+        .category-title.security {
+            color: #d29922;
+        }
+        .changes-list {
+            margin: 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+        .changes-list li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .changes-list ul {
+            margin-top: 8px;
+        }
+        code {
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: var(--primary);
+            font-size: 13px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../images/vz-logo-pb.png" alt="Visual Zone Development Logo" class="logo-image">
+                <span class="logo-text">Visual Zone Development</span>
+            </a>
+            <nav class="nav">
+                <a href="../gitflex/" class="nav-link">← Back to GitFlex</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <h1 class="project-hero-title">GitFlex Changelog</h1>
+                <p class="project-hero-tagline">Track all updates and improvements to the GitFlex extension</p>
+                <div class="project-hero-actions">
+                    <a href="../features/" class="btn btn-secondary">View Features Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog Content -->
+    <section class="project-section">
+        <div class="container">
+            
+            <!-- Version 6.0.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">6.0.0</span>
+                    <span class="version-date">December 7, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Global Issue Creator:</strong> Create GitHub issues from anywhere with keyboard shortcut (Ctrl+Shift+K / Cmd+Shift+K)
+                            <ul>
+                                <li>Repository selector with search functionality</li>
+                                <li>Issue template support with automatic loading</li>
+                                <li>Label, assignee, milestone, and project selectors</li>
+                                <li>Image upload with drag-and-drop support</li>
+                                <li>Option to attach console logs and error messages</li>
+                                <li>Option to append current URL to issue body</li>
+                                <li>Remembers last used repository</li>
+                                <li>Automatic XSS protection and input sanitization</li>
+                                <li>Requires GitHub Personal Access Token (PAT)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Multiple GitHub Account Support:</strong> Add and switch between multiple GitHub accounts
+                            <ul>
+                                <li>Account switcher UI in Authentication tab</li>
+                                <li>Add multiple Personal Access Tokens</li>
+                                <li>Switch between accounts with one click</li>
+                                <li>Each account displays GitHub username after validation</li>
+                                <li>Delete accounts individually</li>
+                                <li>Active account highlighted in switcher</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed">🔧 Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed color parsing bug in <code>getContrastColor</code> function</li>
+                        <li>Fixed XSS vulnerabilities in issue creator input handling</li>
+                        <li>Improved logging system with proper module prefixes</li>
+                        <li>Fixed deprecated method usage in issue creator</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 5.0.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">5.0.0</span>
+                    <span class="version-date">November 30, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Recursive Sub-Issue Progress Indicator:</strong> Track completion across all nested levels of sub-issues
+                            <ul>
+                                <li>Displays below GitHub's native progress bar on parent issues</li>
+                                <li>Includes sub-issues of sub-issues (nested tracking)</li>
+                                <li>Shows comprehensive count: "X nested issues (Y completed)"</li>
+                                <li>Expandable details showing direct vs. nested sub-issue breakdown</li>
+                                <li>Works on both issue pages and project boards</li>
+                                <li>Toggle in Parent Issue Settings to enable/disable</li>
+                                <li>Requires GitHub Personal Access Token (PAT)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Extension Links:</strong> Added quick access links to GitFlex website and donation page in popup</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed">🔄 Changed</div>
+                    <ul class="changes-list">
+                        <li>Optimized sub-issue data fetching for improved performance with recursive tracking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 4.1.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">4.1.0</span>
+                    <span class="version-date">November 19, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Sub-Issue Labels Display:</strong> View labels on sub-issues within parent issue pages
+                            <ul>
+                                <li>Single label: Displays the label with proper GitHub styling</li>
+                                <li>Multiple labels: Shows a compact "X labels" pill with hover tooltip</li>
+                                <li>Configurable in Parent Issue Settings</li>
+                                <li>Theme-aware styling: Automatically adapts to light and dark GitHub themes</li>
+                                <li>Requires GitHub Personal Access Token (PAT)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed">🔄 Changed</div>
+                    <ul class="changes-list">
+                        <li>Label remover buttons now only appear when a PAT is configured</li>
+                        <li>Improved last activity pills to use unified pill utility for consistent styling</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 4.0.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">4.0.0</span>
+                    <span class="version-date">November 17, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Parent Issue Enhancements:</strong> Advanced management tools for issues with sub-issues
+                            <ul>
+                                <li>Bulk Actions Dropdown: Assign users, add labels, or close all sub-issues at once</li>
+                                <li>Last Activity Pills: Color-coded indicators showing when each sub-issue was last updated</li>
+                                <li>Progress Tracking: Real-time progress bars for long-running bulk operations</li>
+                                <li>Rate Limiting Protection: Built-in delays to prevent GitHub API rate limiting</li>
+                            </ul>
+                        </li>
+                        <li>New Parent Issue Settings page for granular feature control</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed">🔧 Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed topbar loading issues on issue and PR pages</li>
+                        <li>Fixed navigation to project pages from various contexts</li>
+                        <li>Fixed topbar visibility and initialization timing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 3.0.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">3.0.0</span>
+                    <span class="version-date">November 13, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li>New Comment Actions Bar: Add additional formatting options and functionality to PR/issue comments</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed">🔄 Changed</div>
+                    <ul class="changes-list">
+                        <li>Improved top bar section flashing on project pages</li>
+                        <li>Improved participants section alignment and theme compatibility</li>
+                        <li>Updated button styles and background color consistency</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed">🔧 Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed participants section alignment issues</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 2.1.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">2.1.0</span>
+                    <span class="version-date">November 11, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li>Added split view support for GitHub Issues (create new, edit existing, and comment forms)</li>
+                        <li>Added skeleton loading states for better perceived performance</li>
+                        <li>Added reusable section utility for consistent topbar styling</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed">🔄 Changed</div>
+                    <ul class="changes-list">
+                        <li>Improved topbar section ordering and consistency</li>
+                        <li>Enhanced CSS organization with separate stylesheets for each component</li>
+                        <li>Refactored section utilities for better code reuse</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed">🔧 Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed last activity parsing to capture all timeline events correctly</li>
+                        <li>Fixed topbar showing in dropdowns on project pages</li>
+                        <li>Fixed related issues trying to load continuously</li>
+                        <li>Fixed skeleton loading for disabled sections</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 2.0.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">2.0.0</span>
+                    <span class="version-date">November 4, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li>Added one-click label removal from PRs and Issues</li>
+                        <li>Added an "Open All" button to sections in the project view</li>
+                        <li>Added Related Issues/PRs to topbar</li>
+                        <li>Added tab to indent option</li>
+                        <li>Added new tab in the settings popup for setting a PAT</li>
+                        <li>Added a new tab in the settings popup for viewing the features list and changelog</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed">🔄 Changed</div>
+                    <ul class="changes-list">
+                        <li>Improved performance of top bar rendering</li>
+                        <li>Added more settings options to choose which features you want to enable</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed">🔧 Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fix quick mention placement when using split view</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 1.1.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">1.1.0</span>
+                    <span class="version-date">October 31, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li>Added settings for enabling/disabling the topbar to PR day indicators</li>
+                        <li>Added a copy button in the header of comments for the link to the comment</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed">🔄 Changed</div>
+                    <ul class="changes-list">
+                        <li>Fix issue where using the back button could cause duplicate top bars</li>
+                        <li>Moved split view button next to Write and Preview tabs</li>
+                        <li>Added split view button to new PR page</li>
+                        <li>Added split view button to comments on PR pages</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed">🔧 Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fix issue with top bar not respecting theme color</li>
+                        <li>Fix issue with "Copy gh checkout" not working properly</li>
+                        <li>Fix issue where using the back button could cause duplicate top bars</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 1.0.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">1.0.0</span>
+                    <span class="version-date">October 25, 2025 - Initial Release</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li>PR age warning tags for pull requests</li>
+                        <li>Customizable age thresholds (orange and red warnings)</li>
+                        <li>Toast notifications for user feedback</li>
+                        <li>Settings popup for configuration</li>
+                        <li>Top bar with activity indicators</li>
+                        <li>Participant mentions and tracking</li>
+                        <li>Split preview for comparing changes</li>
+                        <li>Quick mention buttons</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Visual Zone Development. All rights reserved.</p>
+            <p class="footer-tagline">Building the future, one line of code at a time.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

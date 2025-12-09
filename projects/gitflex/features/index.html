@@ -9,6 +9,55 @@
     <link rel="stylesheet" href="../../../styles/theme.css">
     <link rel="stylesheet" href="../../../styles/styles.css">
     <link rel="stylesheet" href="../../../styles/project.css">
+    <style>
+        .feature-section {
+            margin-bottom: 60px;
+        }
+        .feature-list-clean {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+        .feature-list-clean li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .feature-list-clean li:last-child {
+            border-bottom: none;
+        }
+        .feature-list-clean strong {
+            color: var(--text);
+            font-size: 16px;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .feature-list-clean p {
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .section-image {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin: 32px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .badge-pat {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,7 +68,7 @@
                 <span class="logo-text">Visual Zone Development</span>
             </a>
             <nav class="nav">
-                <a href="../gitflex/" class="nav-link">← Back to GitFlex</a>
+                <a href="../" class="nav-link">← Back to GitFlex</a>
             </nav>
         </div>
     </header>
@@ -29,7 +78,7 @@
         <div class="container">
             <div class="project-hero-content">
                 <h1 class="project-hero-title">GitFlex Features</h1>
-                <p class="project-hero-tagline">Comprehensive overview of all GitFlex features and capabilities</p>
+                <p class="project-hero-tagline">Smart Enhancements for a Better GitHub Experience</p>
                 <div class="project-hero-actions">
                     <a href="../changelog/" class="btn btn-secondary">View Changelog</a>
                 </div>
@@ -37,241 +86,137 @@
         </div>
     </section>
 
-    <!-- Note Section -->
+    <!-- Intro Section -->
     <section class="project-section">
         <div class="container">
             <div class="project-content">
                 <p class="lead">
-                    Items with <strong>⚡</strong> are advanced features that require a Personal Access Token (PAT) for full functionality.
+                    GitFlex adds thoughtful, minimal enhancements that make GitHub faster, clearer, and easier to work with — without clutter, tracking, or unnecessary noise. Everything is designed to feel native, streamlined, and efficient.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Productivity Features -->
+    <!-- Work More Efficiently -->
     <section class="project-section bg-light">
         <div class="container">
-            <h2 class="section-title">⚡ Productivity</h2>
-            <div class="tech-details">
-                <div class="tech-detail">
-                    <h3>⚡ Global Issue Creator</h3>
-                    <p><strong>Create GitHub issues from anywhere with a keyboard shortcut</strong></p>
-                    <ul>
-                        <li><strong>Keyboard Shortcut:</strong> Press Ctrl+Shift+K (Cmd+Shift+K on Mac) from any GitHub page</li>
-                        <li><strong>Repository Selection:</strong> Search and select any repository you have access to</li>
-                        <li><strong>Template Support:</strong> Automatically loads and applies issue templates</li>
-                        <li><strong>Rich Metadata:</strong> Add labels, assignees, milestones, and projects</li>
-                        <li><strong>Image Upload:</strong> Drag and drop or paste images directly</li>
-                        <li><strong>Console Logs:</strong> Attach captured console errors and warnings</li>
-                        <li><strong>URL Append:</strong> Automatically include the current page URL</li>
-                        <li><strong>Smart Memory:</strong> Remembers your last used repository</li>
-                        <li><strong>Security:</strong> Built-in XSS protection and input sanitization</li>
-                    </ul>
-                    <p><em>How to Use:</em></p>
-                    <ol>
-                        <li>Set up your GitHub Personal Access Token in Authentication tab</li>
-                        <li>Press Ctrl+Shift+K (or Cmd+Shift+K on Mac) from any GitHub page</li>
-                        <li>Fill out the issue details and click "Create Issue"</li>
-                    </ol>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>Enhanced Pull Requests</h3>
-                    <p><strong>Powerful tools for managing pull requests efficiently</strong></p>
-                    <ul>
-                        <li><strong>PR Age Labels:</strong> Color-coded age indicators on PR lists (orange/red thresholds configurable)</li>
-                        <li><strong>Quick Actions:</strong> Copy PR link with title, view latest activity</li>
-                        <li><strong>Last Activity Indicators:</strong> See when PRs were last updated at a glance</li>
-                        <li><strong>Split Preview:</strong> Side-by-side write and preview mode for PR descriptions</li>
-                    </ul>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>Enhanced Top Bar</h3>
-                    <p><strong>Information-rich bar below issue/PR titles</strong></p>
-                    <ul>
-                        <li><strong>Copy Link w/ Title:</strong> Quick button to copy formatted title + URL</li>
-                        <li><strong>Comment Count Badge:</strong> Live comment count that scrolls to latest comment</li>
-                        <li><strong>Theme-Aware:</strong> Adapts to GitHub's light and dark themes</li>
-                        <li><strong>Toggle Setting:</strong> Enable or disable via extension settings</li>
-                    </ul>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>Tab to Indent</h3>
-                    <p><strong>Natural tabbing behavior in GitHub text areas</strong></p>
-                    <ul>
-                        <li><strong>Tab Key Support:</strong> Press Tab to insert indentation instead of moving focus</li>
-                        <li><strong>Shift+Tab:</strong> Outdent selected text</li>
-                        <li><strong>Multi-line Support:</strong> Indent/outdent multiple lines at once</li>
-                        <li><strong>Configurable:</strong> Toggle on/off in extension settings</li>
-                    </ul>
-                </div>
+            <h2 class="section-title">🚀 Work More Efficiently</h2>
+            <div class="project-content">
+                <ul class="feature-list-clean">
+                    <li>
+                        <strong>Split Write / Preview Editor</strong>
+                        <p>Write Markdown and see the rendered output side-by-side in PRs, issues, and comments. No more tab switching or losing your place.</p>
+                    </li>
+                    <li>
+                        <strong>Comment Action Bar</strong>
+                        <p>A powerful formatting and quick-action toolbar built directly into comments for faster writing and cleaner formatting.</p>
+                    </li>
+                    <li>
+                        <strong>One-Click Link Copying</strong>
+                        <p>Instantly copy a clean, readable link that includes the issue or PR title—perfect for sharing in Slack, docs, or chats.</p>
+                    </li>
+                    <li>
+                        <strong>Tab-to-Indent in Comments</strong>
+                        <p>Create code blocks and nested lists naturally with proper indentation.</p>
+                    </li>
+                    <li>
+                        <strong>One-Click Label Removal <span class="badge-pat">PAT Required</span></strong>
+                        <p>Remove labels instantly without opening extra menus.</p>
+                    </li>
+                    <li>
+                        <strong>Bulk Actions on Parent Issues <span class="badge-pat">PAT Required</span></strong>
+                        <p>Assign labels or assignees to all sub-issues of a parent issue in one step.</p>
+                    </li>
+                    <li>
+                        <strong>Global Issue Creator (Ctrl + Shift + K) <span class="badge-pat">PAT Required</span></strong>
+                        <p>Instantly open an issue creation modal from anywhere on — no context switching required.</p>
+                    </li>
+                </ul>
+                <img src="../../../images/gitflex/gitflex-work-efficiently.png" alt="GitFlex Work Efficiency Features" class="section-image">
             </div>
         </div>
     </section>
 
-    <!-- Issue & PR Management -->
+    <!-- Stay Aware at a Glance -->
     <section class="project-section">
         <div class="container">
-            <h2 class="section-title">📋 Issue & PR Management</h2>
-            <div class="tech-details">
-                <div class="tech-detail">
-                    <h3>⚡ Parent Issue Enhancements</h3>
-                    <p><strong>Advanced management tools for issues with sub-issues</strong></p>
-                    <ul>
-                        <li><strong>Bulk Actions:</strong> Assign users, add labels, or close all sub-issues at once</li>
-                        <li><strong>Last Activity Pills:</strong> Color-coded indicators showing when each sub-issue was last updated</li>
-                        <li><strong>Progress Tracking:</strong> Real-time progress bars for bulk operations</li>
-                        <li><strong>Sub-Issue Labels:</strong> View labels on sub-issues within parent pages</li>
-                        <li><strong>Recursive Progress:</strong> Track completion across all nested levels of sub-issues</li>
-                        <li><strong>Rate Limiting Protection:</strong> Built-in delays to prevent GitHub API rate limiting</li>
-                    </ul>
-                    <p><em>Features can be toggled individually in Parent Issue Settings</em></p>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>⚡ Related Issues & PRs</h3>
-                    <p><strong>Automatically discover and display related issues and pull requests</strong></p>
-                    <ul>
-                        <li><strong>Comment References:</strong> Finds issues/PRs mentioned in comments</li>
-                        <li><strong>Parent Issues:</strong> Shows parent issues using tasklist syntax</li>
-                        <li><strong>Quick Navigation:</strong> Click to navigate to related items</li>
-                        <li><strong>Consolidated View:</strong> All related items in one place</li>
-                    </ul>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>⚡ Label Management</h3>
-                    <p><strong>Quick label removal from issues and PRs</strong></p>
-                    <ul>
-                        <li><strong>One-Click Removal:</strong> Remove labels without navigating to settings</li>
-                        <li><strong>Visual Feedback:</strong> Instant UI updates after label removal</li>
-                        <li><strong>Hover Actions:</strong> Remove button appears on label hover</li>
-                    </ul>
-                </div>
+            <h2 class="section-title">👀 Stay Aware at a Glance</h2>
+            <div class="project-content">
+                <ul class="feature-list-clean">
+                    <li>
+                        <strong>PR Age Labels</strong>
+                        <p>Color-coded freshness indicators on the issues and PR list so you can spot what's getting stale at a glance.</p>
+                    </li>
+                    <li>
+                        <strong>Live Comment Summary</strong>
+                        <p>See total comment count in the top bar and jump straight to the latest meaningful update.</p>
+                    </li>
+                    <li>
+                        <strong>Participants & Activity Indicators <span class="badge-pat">PAT Required</span></strong>
+                        <p>Subtle, theme-aware markers show who's been active recently.</p>
+                    </li>
+                    <li>
+                        <strong>Nested Sub-Issue Progress Tracking <span class="badge-pat">PAT Required</span></strong>
+                        <p>Visual progress indicators give you true visibility into complex issue hierarchies.</p>
+                    </li>
+                    <li>
+                        <strong>Related Issues & PRs with Quick Actions <span class="badge-pat">PAT Required</span></strong>
+                        <p>A smarter top bar that keeps relevant work easily accessible.</p>
+                    </li>
+                    <li>
+                        <strong>Last-Updated Timers for Sub-Issues <span class="badge-pat">PAT Required</span></strong>
+                        <p>Instantly see how long it's been since each sub-issue was touched.</p>
+                    </li>
+                </ul>
+                <img src="../../../images/gitflex/gitflex-info.png" alt="GitFlex settings" class="section-image">
             </div>
         </div>
     </section>
 
-    <!-- Collaboration Features -->
+    <!-- Multi-Account Ready -->
     <section class="project-section bg-light">
         <div class="container">
-            <h2 class="section-title">👥 Collaboration</h2>
-            <div class="tech-details">
-                <div class="tech-detail">
-                    <h3>⚡ Participants Tracking</h3>
-                    <p><strong>See who's involved in issues and pull requests</strong></p>
-                    <ul>
-                        <li><strong>Auto-Detection:</strong> Automatically identifies all participants from comments and activities</li>
-                        <li><strong>Quick Mention:</strong> One-click mention buttons for all participants</li>
-                        <li><strong>Visual Avatars:</strong> See participant avatars at a glance</li>
-                        <li><strong>Activity Tracking:</strong> Know who's been active on the issue/PR</li>
-                    </ul>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>Comment Actions</h3>
-                    <p><strong>Enhanced commenting tools and formatting</strong></p>
-                    <ul>
-                        <li><strong>Copy Comment Link:</strong> Quick button to copy direct link to any comment</li>
-                        <li><strong>Enhanced Formatting:</strong> Additional formatting options in comment editor</li>
-                        <li><strong>Split View:</strong> Side-by-side write and preview for comments</li>
-                    </ul>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>⚡ Multiple Account Support</h3>
-                    <p><strong>Manage multiple GitHub accounts seamlessly</strong></p>
-                    <ul>
-                        <li><strong>Account Switcher:</strong> Add multiple Personal Access Tokens for different accounts</li>
-                        <li><strong>Instant Switching:</strong> Switch between accounts with one click</li>
-                        <li><strong>Username Display:</strong> Each account shows your GitHub username after validation</li>
-                        <li><strong>Active Highlighting:</strong> Current account highlighted in switcher</li>
-                        <li><strong>Individual Management:</strong> Delete accounts individually as needed</li>
-                    </ul>
-                </div>
+            <h2 class="section-title">🔁 Multi-Account Ready</h2>
+            <div class="project-content">
+                <ul class="feature-list-clean">
+                    <li>
+                        <strong>Built-In Account Switcher <span class="badge-pat">PAT Required</span></strong>
+                        <p>Seamlessly switch between multiple GitHub accounts without logging in and out—perfect for open-source and work accounts.</p>
+                    </li>
+                </ul>
+                <img src="../../../images/gitflex/gitflex-multi-account.png" alt="GitFlex Multi-Account Switcher" class="section-image">
             </div>
         </div>
     </section>
 
-    <!-- Project Board Features -->
+    <!-- Permissions -->
     <section class="project-section">
         <div class="container">
-            <h2 class="section-title">📊 Project Boards</h2>
-            <div class="tech-details">
-                <div class="tech-detail">
-                    <h3>⚡ Project Board Enhancements</h3>
-                    <p><strong>Improved project board workflow and visibility</strong></p>
-                    <ul>
-                        <li><strong>Open All Button:</strong> Open all items in a project section at once</li>
-                        <li><strong>Enhanced Top Bar:</strong> Information-rich bars on project board items</li>
-                        <li><strong>Recursive Progress:</strong> See nested sub-issue completion on project boards</li>
-                        <li><strong>Theme Compatibility:</strong> Consistent styling across project views</li>
-                    </ul>
-                </div>
+            <h2 class="section-title">🔐 Permissions (Simple & Transparent)</h2>
+            <div class="project-content">
+                <p class="lead">GitFlex only requests what it truly needs:</p>
+                <ul class="feature-list-clean">
+                    <li>
+                        <strong>github.com</strong>
+                        <p>Required to enhance the GitHub interface</p>
+                    </li>
+                    <li>
+                        <strong>clipboardWrite</strong>
+                        <p>Enables the "Copy link with title" feature</p>
+                    </li>
+                    <li>
+                        <strong>storage</strong>
+                        <p>Saves your GitFlex preferences</p>
+                    </li>
+                    <li>
+                        <strong>scripting / activeTab</strong>
+                        <p>Standard extension permissions for injecting UI enhancements</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Editor Features -->
-    <section class="project-section bg-light">
-        <div class="container">
-            <h2 class="section-title">✏️ Editor Enhancements</h2>
-            <div class="tech-details">
-                <div class="tech-detail">
-                    <h3>Split View Editor</h3>
-                    <p><strong>Side-by-side write and preview for better editing</strong></p>
-                    <ul>
-                        <li><strong>Issue Creation:</strong> Split view when creating new issues</li>
-                        <li><strong>Issue Editing:</strong> Split view when editing existing issues</li>
-                        <li><strong>Pull Requests:</strong> Split view for PR creation and editing</li>
-                        <li><strong>Comments:</strong> Split view for all comment forms</li>
-                        <li><strong>Real-time Preview:</strong> See rendered markdown as you type</li>
-                    </ul>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>Table Inserter</h3>
-                    <p><strong>Easy table creation in GitHub markdown</strong></p>
-                    <ul>
-                        <li><strong>Visual Builder:</strong> Click to define table dimensions</li>
-                        <li><strong>Improved Performance:</strong> Fast and responsive table insertion</li>
-                        <li><strong>Markdown Generation:</strong> Automatically generates proper markdown syntax</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- UI Improvements -->
-    <section class="project-section">
-        <div class="container">
-            <h2 class="section-title">🎨 UI Improvements</h2>
-            <div class="tech-details">
-                <div class="tech-detail">
-                    <h3>Theme Integration</h3>
-                    <p><strong>Seamless integration with GitHub's interface</strong></p>
-                    <ul>
-                        <li><strong>Dark/Light Theme Support:</strong> Automatically adapts to GitHub theme</li>
-                        <li><strong>Consistent Styling:</strong> Matches GitHub's design language</li>
-                        <li><strong>Compact Dropdowns:</strong> Improved dropdown button styling</li>
-                        <li><strong>Skeleton Loading:</strong> Smooth loading states for better UX</li>
-                    </ul>
-                </div>
-
-                <div class="tech-detail">
-                    <h3>Toast Notifications</h3>
-                    <p><strong>Non-intrusive feedback for actions</strong></p>
-                    <ul>
-                        <li><strong>Action Feedback:</strong> Confirms successful operations</li>
-                        <li><strong>Auto-dismiss:</strong> Disappears after a few seconds</li>
-                        <li><strong>Minimal Design:</strong> Doesn't interrupt workflow</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- PAT Setup -->
     <section class="project-section bg-light">
@@ -288,7 +233,7 @@
                     <li>Add a note (e.g., "GitFlex Extension")</li>
                     <li>Set expiration (recommended: 90 days or No expiration)</li>
                     <li>Select the following scopes:
-                        <ul>
+                        <ul style="margin-left: 24px;">
                             <li><code>repo</code> - Full control of private repositories</li>
                             <li><code>read:org</code> - Read org and team membership</li>
                             <li><code>read:user</code> - Read user profile data</li>
@@ -300,7 +245,6 @@
                     <li>Open GitFlex Settings → Authentication tab</li>
                     <li>Paste your PAT and click "Validate & Save"</li>
                 </ol>
-                <p><strong>Note:</strong> Your PAT is stored securely in your browser's local storage and is never transmitted anywhere except GitHub's API.</p>
             </div>
         </div>
     </section>
@@ -308,8 +252,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Visual Zone Development. All rights reserved.</p>
-            <p class="footer-tagline">Building the future, one line of code at a time.</p>
+            <p>&copy; <span class="footer-year">2025</span> Visual Zone Development. All rights reserved.</p>
+            <p class="footer-tagline">Inspired by our needs. Perfected for yours.</p>
         </div>
     </footer>
 

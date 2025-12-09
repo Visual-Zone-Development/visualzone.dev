@@ -112,4 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
             hero.style.transform = 'translateY(0)';
         }, 100);
     }
+
+    // Update footer year dynamically
+    const footerYear = document.querySelector('.footer-year');
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+    }
 });

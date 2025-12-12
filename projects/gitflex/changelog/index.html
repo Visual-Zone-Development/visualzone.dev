@@ -112,7 +112,46 @@
         <div class="container">
             
 
-            <!-- Version 6.0.1 -->
+
+
+            <!-- Version 6.1.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">6.1.0</span>
+                    <span class="version-date">December 11, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added"> Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Cross-Domain Global Issue Creator:</strong> Enable the Global Issue Creator on any website beyond GitHub
+                            <ul>
+                                <li>Add custom domains through the Authentication tab</li>
+                                <li>Works on localhost and local development servers (127.0.0.1)</li>
+                                <li>Granular permission control - grant access per domain</li>
+                                <li>Automatic content script injection on permitted domains</li>
+                                <li>Visual domain management UI with easy removal</li>
+                                <li>Secure permission model with explicit user consent</li>
+                                <li>Keyboard shortcut (Ctrl+Shift+K) works on all permitted domains</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed"> Changed</div>
+                    <ul class="changes-list">
+                        <li><strong>Permissions Model:</strong> Added <code>scripting</code> permission for dynamic content script injection on user-approved domains</li>
+                        <li><strong>Optional Permissions:</strong> Added optional host permissions for HTTPS/HTTP domains and localhost</li>
+                        <li><strong>Security Improvements:</strong> Removed development console logs from background worker for cleaner production code</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed"> Fixed</div>
+                    <ul class="changes-list">
+                        <li>Improved PAT security implementation with comprehensive audit</li>
+                        <li>Enhanced error handling for permission grants and script injection</li>
+                    </ul>
+                </div>
+            </div>            <!-- Version 6.0.1 -->
             <div class="version-section">
                 <div class="version-header">
                     <span class="version-number">6.0.1</span>

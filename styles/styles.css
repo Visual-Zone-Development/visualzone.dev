@@ -245,6 +245,33 @@
     gap: 0.75rem;
 }
 
+/* Coming Soon Card */
+.project-card.coming-soon {
+    position: relative;
+    opacity: 0.85;
+    cursor: default;
+}
+
+.project-card.coming-soon:hover {
+    transform: none;
+    border-color: var(--border-color);
+    background: var(--bg-white);
+}
+
+.coming-soon-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 /* About Section */
 .about {
     padding: 80px 0;

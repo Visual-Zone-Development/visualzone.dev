@@ -111,8 +111,51 @@
     <section class="project-section">
         <div class="container">
             
-
-
+            <!-- Version 6.2.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">6.2.0</span>
+                    <span class="version-date">December 15, 2025</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Parent Issue Breadcrumbs:</strong> Visual breadcrumb navigation for parent issue hierarchies
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>Shows full parent chain with clickable links</li>
+                                <li>Displays truncated issue titles for better readability</li>
+                                <li>Works in both regular issue pages and issue panes (modal view)</li>
+                                <li>Automatically hides for single-level parent relationships</li>
+                                <li>Positioned consistently with top bar for unified UI</li>
+                                <li>Toggle on/off in Advanced Settings</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed">🐛 Fixed</div>
+                    <ul class="changes-list">
+                        <li><strong>Global Issue Creator:</strong> Resolved modal closing issues preventing user interaction</li>
+                        <li><strong>Concurrent Modal Creation:</strong> Added protection against duplicate modal instances</li>
+                        <li><strong>Domain Permissions:</strong> Fixed sync issues between extension storage and Chrome permissions
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>Automatic cleanup of orphaned permissions on popup load</li>
+                                <li>Proper permission revocation when domains are removed</li>
+                                <li>Improved permission verification workflow</li>
+                            </ul>
+                        </li>
+                        <li><strong>CORS Error Suppression:</strong> Silenced expected GitHub Projects API CORS errors to reduce console noise</li>
+                        <li><strong>Top Bar in Panes:</strong> Fixed top bar not loading in issue panes on issue pages</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed">🔧 Changed</div>
+                    <ul class="changes-list">
+                        <li><strong>Debug Logging:</strong> Removed verbose testing logs for cleaner production experience</li>
+                        <li><strong>Domain Addition Flow:</strong> Improved UX by showing domain in list before permission dialog</li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- Version 6.1.0 -->
             <div class="version-section">

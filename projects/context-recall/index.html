@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Recall - VS Code Extension | Visual Zone Development</title>
+    <meta name="description" content="Context Recall is a VS Code extension that helps you manage multiple tasks by capturing and restoring complete workspace snapshots.">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/theme.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/vz-logo-pb.png" alt="Visual Zone Development Logo" class="logo-image">
+                <span class="logo-text">Visual Zone Development</span>
+            </a>
+            <nav class="nav">
+                <a href="../../index.html" class="nav-link">← Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-icon-large">
+                    <img src="../../images/context-recall/context-recall-logo.png" alt="Context Recall icon">
+                </div>
+                <h1 class="project-hero-title">Context Recall</h1>
+                <p class="project-hero-tagline">Never Lose Your Place Again</p>
+                <div class="project-hero-tags">
+                    <span class="tag">VS Code Extension</span>
+                    <span class="tag">Productivity</span>
+                    <span class="tag">Git Integration</span>
+                    <span class="tag">Task Management</span>
+                </div>
+                <div class="project-hero-actions">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=VisualZoneDevelopment.context-recall" class="btn btn-primary" target="_blank" rel="noopener">Download Extension</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Overview</h2>
+            <div class="project-content">
+                <p class="lead">
+                    Context Recall helps you manage multiple tasks by capturing and restoring complete workspace 
+                    snapshots—including open files, cursor positions, and Git branches. Switch between tasks 
+                    instantly without losing your place.
+                </p>
+                <p>
+                    Whether you're juggling multiple feature branches, reviewing pull requests, or exploring 
+                    different areas of a codebase, Context Recall ensures you can always pick up exactly where 
+                    you left off.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div style="text-align: center; margin-bottom: 24px;">
+                <a href="./changelog/" class="btn btn-secondary">View Full Changelog</a>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Task Profiles</h3>
+                    <p>Create profiles that snapshot your entire workspace context—open files, cursor positions, Git branches, and custom notes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Seamless Task Switching</h3>
+                    <p>Switch between tasks instantly with full context restoration. Open the right files with cursor positions exactly where you left off.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Smart Git Integration</h3>
+                    <p>Automatic profile creation for new branches, auto-switch profiles when changing branches, and Git stash support for uncommitted changes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Flexible Automation</h3>
+                    <p>Configure how Context Recall behaves with multiple automation modes for task creation, profile switching, and cleanup.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Profile Customization</h3>
+                    <p>Add notes and descriptions to profiles. Configure auto-update, Git stash behavior, and editor closing preferences per profile.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Tree View Management</h3>
+                    <p>Manage all your task profiles from a dedicated sidebar. Quick access to create, switch, edit, and delete profiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Use Cases</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Multi-Task Development</h3>
+                    <p>Working on a bug fix while also developing a new feature? Create separate profiles for each task and switch between them without losing context.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👀</div>
+                    <h3>Code Reviews</h3>
+                    <p>Create a profile for each pull request you're reviewing. Open all relevant files, add notes, and return to exactly where you left off.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Learning New Codebases</h3>
+                    <p>Create profiles for different areas of the codebase you're exploring. Keep track of your progress and notes for each area.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌲</div>
+                    <h3>Feature Branch Workflow</h3>
+                    <p>Let Context Recall automatically create and switch profiles as you work with Git branches. Your workspace always matches your current branch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Getting Started</h2>
+            <div class="installation-steps">
+                <ol>
+                    <li><strong>Create a Task Profile:</strong> Click the <code>+</code> icon in the Context Recall sidebar or use the command palette (<code>Ctrl+Shift+P</code> → "Context Recall: Create New Task Profile")</li>
+                    <li><strong>Switch Between Tasks:</strong> Click on any profile in the sidebar to instantly switch your workspace context</li>
+                    <li><strong>Configure Automation:</strong> Click the gear icon in the sidebar to configure how Context Recall works with your Git workflow</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Technical Details</h2>
+            <div class="tech-details">
+                <div class="tech-detail">
+                    <h3>Technology Stack</h3>
+                    <ul>
+                        <li>TypeScript</li>
+                        <li>VS Code Extension API</li>
+                        <li>Git Integration</li>
+                        <li>Workspace State Management</li>
+                    </ul>
+                </div>
+                <div class="tech-detail">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>VS Code 1.95.0 or higher</li>
+                        <li>Git (for Git integration features)</li>
+                    </ul>
+                </div>
+                <div class="tech-detail">
+                    <h3>Commands</h3>
+                    <ul>
+                        <li>Create New Task Profile</li>
+                        <li>Switch Task Profile</li>
+                        <li>Edit Task Profile</li>
+                        <li>Delete Task Profile</li>
+                        <li>Open Settings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configuration -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Configuration Options</h2>
+            <div class="project-content">
+                <h3>Automation Settings</h3>
+                <ul>
+                    <li><strong>Task Creation Mode:</strong> Manual, Prompt on new branch, or Automatic on new branch</li>
+                    <li><strong>Task Deletion Mode:</strong> Manual or Automatic on branch deletion</li>
+                    <li><strong>Profile Switch Mode:</strong> Manual, Prompt when task exists, or Automatic when task exists</li>
+                    <li><strong>Prompt on Branch Switch:</strong> Prompt to delete profile when switching away from a branch</li>
+                </ul>
+                
+                <h3>Profile Defaults</h3>
+                <ul>
+                    <li><strong>Auto Update:</strong> Automatically save changes when files are modified (default: true)</li>
+                    <li><strong>Create Stash on Switch:</strong> Create git stash when switching away from this profile (default: true)</li>
+                    <li><strong>Auto Checkout Branch:</strong> Automatically checkout the associated git branch when switching to this profile (default: true)</li>
+                    <li><strong>Close Editors on Switch:</strong> Close all open editors when switching away from this profile (default: false)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="project-section">
+        <div class="container">
+            <h2 class="section-title">Download & Installation</h2>
+            <div class="download-options">
+                <div class="download-card">
+                    <h3>VS Code Marketplace</h3>
+                    <p>Install directly from the official VS Code Marketplace</p>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=VisualZoneDevelopment.context-recall" class="btn btn-primary" target="_blank" rel="noopener">Install from Marketplace</a>
+                    <p class="download-note">Automatic updates included</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Support & Feedback</h2>
+            <div class="project-content">
+                <p class="lead">
+                    We're constantly improving Context Recall based on user feedback and suggestions!
+                </p>
+                <p>
+                    Whether you want to report a bug, suggest a feature, or share your experience, 
+                    we'd love to hear from you. Your feedback helps us make Context Recall better for everyone.
+                </p>
+                <div class="contributing-actions">
+                    <a href="mailto:support@visualzone.dev?subject=%5BContext%20Recall%5D%20Report%20Issue" class="btn btn-primary">
+                        Report an Issue
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span class="footer-year">2025</span> Visual Zone Development. All rights reserved.</p>
+            <p class="footer-tagline">Inspired by our needs. Perfected for yours.</p>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

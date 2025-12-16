@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Recall Changelog - Version History | Visual Zone Development</title>
+    <meta name="description" content="Track all updates and improvements to the Context Recall VS Code extension.">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/theme.css">
+    <link rel="stylesheet" href="../../../styles/styles.css">
+    <link rel="stylesheet" href="../../../styles/project.css">
+    <style>
+        .version-section {
+            margin-bottom: 40px;
+            padding: 24px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .version-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .version-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 16px;
+        }
+        .version-date {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .changes-category {
+            margin-bottom: 24px;
+        }
+        .changes-category:last-child {
+            margin-bottom: 0;
+        }
+        .category-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .category-title.added {
+            color: #3fb950;
+        }
+        .category-title.changed {
+            color: #58a6ff;
+        }
+        .category-title.fixed {
+            color: #f85149;
+        }
+        .category-title.security {
+            color: #d29922;
+        }
+        .changes-list {
+            margin: 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+        .changes-list li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .changes-list ul {
+            margin-top: 8px;
+            padding-left: 24px;
+        }
+        code {
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: var(--primary);
+            font-size: 13px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../images/vz-logo-pb.png" alt="Visual Zone Development Logo" class="logo-image">
+                <span class="logo-text">Visual Zone Development</span>
+            </a>
+            <nav class="nav">
+                <a href="../" class="nav-link">← Back to Context Recall</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <h1 class="project-hero-title">Context Recall Changelog</h1>
+                <p class="project-hero-tagline">Track all updates and improvements to the Context Recall extension</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog Content -->
+    <section class="project-section">
+        <div class="container">
+            
+            <!-- Version 0.0.1 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">0.0.1</span>
+                    <span class="version-date">Initial Release</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Task Profile Creation and Management:</strong> Create and manage profiles that capture your complete workspace state
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>Capture open files and their exact cursor positions</li>
+                                <li>Save active editor state</li>
+                                <li>Associate profiles with Git branches</li>
+                                <li>Add custom notes and descriptions to profiles</li>
+                            </ul>
+                        </li>
+                        <li><strong>Seamless Context Switching:</strong> Switch between task profiles with full workspace restoration
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>Automatically open saved files</li>
+                                <li>Restore cursor positions exactly where you left off</li>
+                                <li>Checkout associated Git branches</li>
+                                <li>Apply Git stashes automatically</li>
+                            </ul>
+                        </li>
+                        <li><strong>Smart Git Integration:</strong> Deep integration with your Git workflow
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>Automatic profile creation when creating new branches</li>
+                                <li>Auto-switch to profiles when changing branches via command line</li>
+                                <li>Git stash support to preserve uncommitted changes</li>
+                                <li>Automatic cleanup when branches are deleted</li>
+                            </ul>
+                        </li>
+                        <li><strong>Flexible Automation Modes:</strong> Configure how Context Recall behaves
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li><strong>Task Creation:</strong> Manual, Prompt on new branch, or Automatic on new branch</li>
+                                <li><strong>Profile Switching:</strong> Manual, Prompt when task exists, or Automatic when task exists</li>
+                                <li><strong>Task Deletion:</strong> Manual or Automatic on branch deletion</li>
+                            </ul>
+                        </li>
+                        <li><strong>Profile Configuration Options:</strong> Customize default behavior for new profiles
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>Auto-update: Automatically save changes when files are modified</li>
+                                <li>Create stash on switch: Preserve uncommitted changes</li>
+                                <li>Auto-checkout branch: Automatically checkout associated Git branch</li>
+                                <li>Close editors on switch: Clean up editors when switching away</li>
+                            </ul>
+                        </li>
+                        <li><strong>Tree View Sidebar:</strong> Dedicated sidebar for profile management
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>View all task profiles at a glance</li>
+                                <li>Quick access to create, switch, edit, and delete profiles</li>
+                                <li>Visual indicators for active profile</li>
+                                <li>Settings access directly from sidebar</li>
+                            </ul>
+                        </li>
+                        <li><strong>Status Bar Integration:</strong> Quick status and access from the status bar
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>Shows current active profile</li>
+                                <li>Click to quickly switch profiles</li>
+                            </ul>
+                        </li>
+                        <li><strong>Command Palette Integration:</strong> Full command palette support
+                            <ul style="margin-left: 20px; margin-top: 4px;">
+                                <li>Context Recall: Create New Task Profile</li>
+                                <li>Context Recall: Switch Task Profile</li>
+                                <li>Context Recall: Edit Task Profile</li>
+                                <li>Context Recall: Delete Task Profile</li>
+                                <li>Context Recall: Open Settings</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span class="footer-year">2025</span> Visual Zone Development. All rights reserved.</p>
+            <p class="footer-tagline">Inspired by our needs. Perfected for yours.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

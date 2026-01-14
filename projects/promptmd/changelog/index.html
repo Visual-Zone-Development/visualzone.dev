@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptMD Changelog - Version History | Visual Zone Development</title>
+    <meta name="description" content="Track all updates and improvements to the PromptMD browser extension for ChatGPT.">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/theme.css">
+    <link rel="stylesheet" href="../../../styles/styles.css">
+    <link rel="stylesheet" href="../../../styles/project.css">
+    <style>
+        .version-section {
+            margin-bottom: 40px;
+            padding: 24px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .version-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .version-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 16px;
+        }
+        .version-date {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .changes-category {
+            margin-bottom: 24px;
+        }
+        .changes-category:last-child {
+            margin-bottom: 0;
+        }
+        .category-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .category-title.added {
+            color: #3fb950;
+        }
+        .category-title.changed {
+            color: #58a6ff;
+        }
+        .category-title.fixed {
+            color: #f85149;
+        }
+        .category-title.security {
+            color: #d29922;
+        }
+        .changes-list {
+            margin: 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+        .changes-list li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .changes-list ul {
+            margin-top: 8px;
+            padding-left: 24px;
+        }
+        code {
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: var(--primary);
+            font-size: 13px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../images/vz-logo-pb.png" alt="Visual Zone Development Logo" class="logo-image">
+                <span class="logo-text">Visual Zone Development</span>
+            </a>
+            <nav class="nav">
+                <a href="../" class="nav-link">← Back to PromptMD</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <h1 class="project-hero-title">PromptMD Changelog</h1>
+                <p class="project-hero-tagline">Track all updates and improvements to the PromptMD extension</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog Content -->
+    <section class="project-section">
+        <div class="container">
+            <!-- Version 1.1.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">1.1.0</span>
+                    <span class="version-date">January 13, 2026</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title fixed">🐛 Fixed</div>
+                    <ul class="changes-list">
+                        <li><strong>Enter for New Line:</strong> Fixed issue where Enter key was not working to create new lines</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 1.0.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">1.0.0</span>
+                    <span class="version-date">January 10, 2026</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Markdown Toolbar:</strong> Quick-access buttons for bold, italic, code blocks, lists, links, and more</li>
+                        <li><strong>Enter for New Line:</strong> Press Enter to create new lines instead of submitting (Shift+Enter to send)</li>
+                        <li><strong>Tab to Indent:</strong> Use Tab key for proper code indentation</li>
+                        <li><strong>Live Preview:</strong> See how your markdown will render before sending</li>
+                        <li><strong>Smart List Continuation:</strong> Automatically continues numbered and bullet lists</li>
+                        <li><strong>Keyboard Shortcuts:</strong> Ctrl+B for bold, Ctrl+I for italic</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span class="footer-year">2026</span> Visual Zone Development. All rights reserved.</p>
+            <p class="footer-tagline">Inspired by our needs. Perfected for yours.</p>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+</body>
+</html>

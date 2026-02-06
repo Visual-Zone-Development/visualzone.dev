@@ -110,6 +110,27 @@
     <!-- Changelog Content -->
     <section class="project-section">
         <div class="container">
+            <!-- Version 6.4.0 -->
+            <div class="version-section">
+                <div class="version-header">
+                    <span class="version-number">6.4.0</span>
+                    <span class="version-date">February 6, 2026</span>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title added">✨ Added</div>
+                    <ul class="changes-list">
+                        <li><strong>Recursive Field Sums:</strong> Project board sections grouped by parent issue now display recursive sums for all numeric fields (estimates, story points, hours, etc.). The feature uses batched GraphQL queries to efficiently calculate totals across all nested sub-issues, replacing GitHub's native field pills with accurate recursive values.</li>
+                    </ul>
+                </div>
+                <div class="changes-category">
+                    <div class="category-title changed">🔧 Changed</div>
+                    <ul class="changes-list">
+                        <li><strong>Nested Progress Indicator:</strong> Added loading indicator (⏳) when calculating recursive progress to provide visual feedback during data fetching</li>
+                        <li><strong>Performance Optimization:</strong> Improved field estimate calculations with batched GraphQL API calls, reducing individual requests from one-per-issue to one-per-10-issues</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- Version 6.3.0 -->
             <div class="version-section">
                 <div class="version-header">

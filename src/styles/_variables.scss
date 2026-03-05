@@ -1,0 +1,41 @@
+// ============================================================
+// Visual Zone Development — Design Tokens
+// ============================================================
+
+:root {
+  // Brand colours
+  --primary-color: #0A9AE4;
+  --primary-dark: #0779B8;
+  --secondary-color: #6D28D9;
+  --secondary-dark: #4C1D95;
+
+  // Text
+  --text-dark: #e5e7eb;
+  --text-light: #9ca3af;
+
+  // Backgrounds
+  --bg-white: #111827;
+  --bg-light: #1f2937;
+  --bg-darker: #0f172a;
+  --bg-hero: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+
+  // Borders & shadows
+  --border-color: #374151;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+  // Transitions
+  --transition: all 0.3s ease;
+}
+
+// SCSS variables (for use inside Sass functions / interpolations)
+$primary:        #0A9AE4;
+$primary-dark:   #0779B8;
+$secondary:      #6D28D9;
+$secondary-dark: #4C1D95;
+$bg-darker:      #0f172a;
+$bg-white:       #111827;
+$bg-light:       #1f2937;
+$border-color:   #374151;
+$text-dark:      #e5e7eb;
+$text-light:     #9ca3af;

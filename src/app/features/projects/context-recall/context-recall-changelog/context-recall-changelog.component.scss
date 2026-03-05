@@ -1,0 +1,70 @@
+@use 'styles/project-page';
+@use 'styles/variables' as v;
+
+.changelog-page {
+  .version-section {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+
+    &--latest {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 1px rgba(10, 154, 228, 0.2);
+    }
+  }
+
+  .version-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .version-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .version-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+
+  .version-latest-badge {
+    padding: 2px 10px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .category-block { margin-bottom: 16px; &:last-child { margin-bottom: 0; } }
+
+  .category-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+
+    &.added    { color: #3fb950; }
+    &.changed  { color: #58a6ff; }
+    &.fixed    { color: #f85149; }
+    &.security { color: #d29922; }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 18px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+}

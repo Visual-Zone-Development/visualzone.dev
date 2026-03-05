@@ -1,0 +1,183 @@
+<!-- HERO -->
+<section class="project-hero">
+  <div class="project-hero-inner">
+    <img src="assets/images/gitflex/gitflex-icon.png" alt="GitFlex icon" class="project-icon" />
+    <h1 class="project-title">GitFlex</h1>
+    <p class="project-tagline">Supercharge Your GitHub Workflow</p>
+    <div class="hero-badges">
+      <span class="badge-featured">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Featured Extension
+      </span>
+      <span class="badge-trusted">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        Trusted Publisher
+      </span>
+    </div>
+    <div class="hero-tags">
+      <span class="tag-pill">Browser Extension</span>
+      <span class="tag-pill">GitHub</span>
+      <span class="tag-pill">Productivity</span>
+    </div>
+    <div class="hero-actions">
+      <a
+        href="https://chromewebstore.google.com/detail/gitflex-ux-enhancements-f/mchhhlkgpmiinbnonjpeillinmgaoein"
+        target="_blank" rel="noopener"
+        class="btn-primary"
+      >Download Extension</a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-lead">
+      GitFlex is a Manifest V3 browser extension that seamlessly integrates into GitHub to give
+      you a better-than-default experience. From smarter pull request views and enhanced comment
+      tools to a global issue creator and multi-account support — GitFlex makes every GitHub
+      interaction faster and more productive.
+    </p>
+  </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Key Features</h2>
+    <div class="section-actions">
+      <a routerLink="/projects/gitflex/features" class="btn-secondary">Features Guide</a>
+      <a routerLink="/projects/gitflex/changelog" class="btn-secondary">Changelog</a>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🚀</div>
+        <h3 class="feature-title">Enhanced Pull Requests</h3>
+        <p class="feature-desc">PR age warnings, review day indicators, participant avatars, and a split-preview panel.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">📋</div>
+        <h3 class="feature-title">Issue Organization</h3>
+        <p class="feature-desc">Sub-issue progress bars, parent breadcrumbs, label management, and bulk actions.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">💬</div>
+        <h3 class="feature-title">Comment Tools</h3>
+        <p class="feature-desc">One-click copy, tab-to-indent in editors, smart quick-mention insertion.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">👥</div>
+        <h3 class="feature-title">Team Collaboration</h3>
+        <p class="feature-desc">Multi-account support and a global issue creator (Ctrl+Shift+K) for any org.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">Workflow Optimization</h3>
+        <p class="feature-desc">Recursive field sums on project boards, batched GraphQL queries, loading indicators.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🎨</div>
+        <h3 class="feature-title">UI Improvements</h3>
+        <p class="feature-desc">Topbar reorganization, unobtrusive affordances, and fully configurable settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Screenshots</h2>
+    <div class="screenshots-grid">
+      @for (shot of screenshots; track $index) {
+        <div class="screenshot-thumb" (click)="openModal($index)" appAnimateOnScroll>
+          <img [src]="shot.src" [alt]="shot.alt" />
+          <div class="thumb-caption">{{ shot.caption }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL DETAILS -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Technical Details</h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h4>Stack</h4>
+        <ul>
+          <li>Manifest V3 JavaScript</li>
+          <li>Content Scripts</li>
+          <li>GitHub REST &amp; GraphQL APIs</li>
+        </ul>
+      </div>
+      <div class="tech-card">
+        <h4>Browser Support</h4>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Microsoft Edge</li>
+          <li>Brave</li>
+          <li>Any Chromium browser</li>
+        </ul>
+      </div>
+      <div class="tech-card">
+        <h4>Permissions</h4>
+        <ul>
+          <li>clipboardWrite</li>
+          <li>scripting</li>
+          <li>activeTab</li>
+          <li>github.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Download &amp; Install</h2>
+    <div class="download-grid">
+      <div class="download-card">
+        <h3>Chrome Web Store</h3>
+        <p>Install directly from the Chrome Web Store for automatic updates.</p>
+        <a
+          href="https://chromewebstore.google.com/detail/gitflex-ux-enhancements-f/mchhhlkgpmiinbnonjpeillinmgaoein"
+          target="_blank" rel="noopener"
+          class="btn-primary"
+        >Install GitFlex</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Support &amp; Feedback</h2>
+    <div class="support-block">
+      <p>Enjoying GitFlex? Consider supporting us!</p>
+      <div class="support-actions">
+        <a
+          href="https://buymeacoffee.com/visualzonedevelopment"
+          target="_blank" rel="noopener"
+          class="btn-primary"
+        >☕ Buy Us a Coffee</a>
+        <a
+          href="mailto:support@visualzone.dev?subject=[GitFlex] Report Issue"
+          class="btn-secondary"
+        >Report an Issue</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE MODAL -->
+@if (showModal()) {
+  <app-image-modal
+    [images]="screenshots"
+    (closed)="onModalClosed()"
+  />
+}

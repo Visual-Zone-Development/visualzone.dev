@@ -1,158 +1,59 @@
-# Visual Zone Development Website
+# VisualzoneNg
 
-This is the official website for Visual Zone Development, showcasing our projects and company information.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
 
-## 🌐 Live Site
+## Development server
 
-Visit us at: [visualzone.dev](https://visualzone.dev)
+To start a local development server, run:
 
-## 🚀 GitHub Pages Setup
-
-This website is designed to be hosted on GitHub Pages for free. Follow these steps to deploy:
-
-### Option 1: Deploy to GitHub Pages (Recommended)
-
-1. **Create a new repository** named `visualzone.dev` (or your custom domain)
-
-2. **Push the website files:**
-   ```bash
-   cd website
-   git init
-   git add .
-   git commit -m "Initial commit: Visual Zone Development website"
-   git branch -M main
-   git remote add origin https://github.com/Visual-Zone-Development/visualzone.dev.git
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages:**
-   - Go to your repository settings
-   - Navigate to "Pages" section
-   - Under "Source", select `main` branch and `/ (root)` folder
-   - Click "Save"
-   - Your site will be live at `https://visual-zone-development.github.io/visualzone.dev/`
-
-4. **Custom Domain (Optional):**
-   - In repository settings > Pages, add your custom domain (e.g., `visualzone.dev`)
-   - Create a `CNAME` file in the root with your domain name
-   - Configure DNS settings with your domain provider:
-     - Add A records pointing to GitHub's IPs:
-       - `185.199.108.153`
-       - `185.199.109.153`
-       - `185.199.110.153`
-       - `185.199.111.153`
-     - Or add a CNAME record pointing to `visual-zone-development.github.io`
-
-### Option 2: Deploy from Existing Repository
-
-If deploying from the GitFlex repository:
-
-1. **Enable GitHub Pages:**
-   - Go to repository settings
-   - Navigate to "Pages"
-   - Select source: `main` branch
-   - Select folder: `/website`
-   - Click "Save"
-
-2. **Access the site:**
-   - Your site will be at: `https://visual-zone-development.github.io/GitFlex/`
-
-## 📁 Project Structure
-
-```
-website/
-├── index.html              # Landing page
-├── styles.css              # Main stylesheet
-├── script.js               # JavaScript interactions
-├── assets/                 # Images and media
-│   ├── logo.svg           # Company logo (placeholder)
-│   ├── hero-illustration.svg  # Hero section image
-│   └── projects/          # Project-specific assets
-│       ├── gitflex-icon.png
-│       ├── gitflex-screenshot1.png
-│       ├── gitflex-screenshot2.png
-│       ├── gitflex-screenshot3.png
-│       ├── project2-icon.png
-│       └── project3-icon.png
-└── projects/              # Individual project pages
-    ├── project.css        # Project page styles
-    ├── gitflex.html       # GitFlex project page
-    ├── project2.html      # Placeholder project
-    └── project3.html      # Placeholder project
+```bash
+ng serve
 ```
 
-## 🎨 Customization
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-### Adding New Projects
+## Code scaffolding
 
-1. **Update `index.html`:**
-   - Add a new project card in the `.projects-grid` section
-   - Include icon, title, description, tags, and link
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-2. **Create project page:**
-   - Copy `projects/project2.html` as a template
-   - Update content with project details
-   - Add screenshots and download links
+```bash
+ng generate component component-name
+```
 
-3. **Add assets:**
-   - Place project icon in `assets/projects/`
-   - Add screenshots as needed
-   - Use consistent naming: `projectname-icon.png`, `projectname-screenshot1.png`
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-### Updating Placeholders
+```bash
+ng generate --help
+```
 
-Replace placeholder images in `assets/`:
-- `logo.svg` - Your company logo
-- `hero-illustration.svg` - Hero section illustration
-- `projects/[project]-icon.png` - Project icons
-- `projects/[project]-screenshot[n].png` - Project screenshots
+## Building
 
-### Styling
+To build the project run:
 
-- **Colors:** Edit CSS variables in `styles.css` under `:root`
-- **Fonts:** Update font stack in `body` selector
-- **Layout:** Modify container widths, grid columns, and spacing
+```bash
+ng build
+```
 
-## 🔧 Local Development
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-To test locally:
+## Running unit tests
 
-1. Open `index.html` in a web browser, or
-2. Use a local server:
-   ```bash
-   # Python 3
-   python -m http.server 8000
-   
-   # Node.js
-   npx serve
-   ```
-3. Visit `http://localhost:8000`
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-## 📱 Features
+```bash
+ng test
+```
 
-- ✅ Fully responsive design
-- ✅ Smooth scrolling navigation
-- ✅ Animated elements on scroll
-- ✅ Project showcase with detail pages
-- ✅ SEO-optimized HTML
-- ✅ Fast loading (no external dependencies)
-- ✅ GitHub Pages ready
+## Running end-to-end tests
 
-## 🛠️ Technologies
+For end-to-end (e2e) testing, run:
 
-- HTML5
-- CSS3 (with CSS Variables)
-- Vanilla JavaScript (no frameworks)
-- GitHub Pages hosting
+```bash
+ng e2e
+```
 
-## 📄 License
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-© 2025 Visual Zone Development. All rights reserved.
+## Additional Resources
 
-## 🤝 Contributing
-
-This is the company website for Visual Zone Development. For contributions to our projects, please visit the individual project repositories.
-
----
-
-Built with ❤️ by Visual Zone Development
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

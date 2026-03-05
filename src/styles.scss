@@ -1,0 +1,101 @@
+@use '@angular/material' as mat;
+@use 'styles/variables' as v;
+@use 'styles/mixins' as m;
+
+// ============================================================
+// Angular Material — custom dark theme
+// ============================================================
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$violet-palette,
+      theme-type: dark,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+// ============================================================
+// Base reset & typography
+// ============================================================
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-darker);
+  color: var(--text-dark);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; height: auto; }
+
+// ============================================================
+// Utility classes
+// ============================================================
+.section-bg-light { background: var(--bg-light); }
+
+.btn-primary { @include m.btn-primary; }
+.btn-secondary { @include m.btn-secondary; }
+
+.animate-on-scroll { @include m.animate-on-scroll; }
+
+.badge-featured { @include m.badge-featured; }
+.badge-trusted  { @include m.badge-trusted; }
+
+// Tag pill used everywhere
+.tag-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(10, 154, 228, 0.15);
+  color: var(--primary-color);
+  border: 1px solid rgba(10, 154, 228, 0.3);
+}
+
+// Changelog category colours
+.cat-added    { color: #3fb950; }
+.cat-changed  { color: #58a6ff; }
+.cat-fixed    { color: #f85149; }
+.cat-security { color: #d29922; }
+
+// ============================================================
+// Material overrides — align with dark brand theme
+// ============================================================
+
+// Chip
+.mat-mdc-chip.mat-mdc-standard-chip {
+  background: var(--bg-light) !important;
+  color: var(--text-light) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: var(--transition);
+
+  &.active-chip,
+  &[aria-selected='true'] {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    border-color: var(--primary-color) !important;
+  }
+}
+
+// Toolbar
+.mat-toolbar {
+  background: var(--bg-white) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-dark) !important;
+}
+
+// Ripple colour override
+.mat-mdc-button .mat-ripple-element,
+.mat-mdc-icon-button .mat-ripple-element {
+  background-color: rgba(10, 154, 228, 0.1) !important;
+}

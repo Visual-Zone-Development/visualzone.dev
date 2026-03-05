@@ -1,0 +1,48 @@
+<header class="site-header" [class.scrolled]="scrolled()">
+  <div class="header-inner">
+    <!-- Logo -->
+    <a class="logo" routerLink="/" (click)="closeMenu()">
+      <img src="assets/images/vz-logo-pb.png" alt="Visual Zone Development logo" height="36" />
+      <span class="logo-text">Visual Zone Development</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="desktop-nav">
+      @if (isHome()) {
+        <button mat-button (click)="scrollToSection('home')">Home</button>
+        <button mat-button (click)="scrollToSection('projects')">Projects</button>
+        <button mat-button (click)="scrollToSection('contact')">Contact</button>
+      } @else {
+        <a mat-button routerLink="/" class="back-link">
+          <mat-icon>arrow_back</mat-icon> Back to Home
+        </a>
+      }
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button
+      mat-icon-button
+      class="hamburger"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="mobileOpen()"
+      aria-label="Toggle navigation"
+    >
+      <mat-icon>{{ mobileOpen() ? 'close' : 'menu' }}</mat-icon>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown -->
+  @if (mobileOpen()) {
+    <nav class="mobile-nav">
+      @if (isHome()) {
+        <button mat-button (click)="scrollToSection('home')">Home</button>
+        <button mat-button (click)="scrollToSection('projects')">Projects</button>
+        <button mat-button (click)="scrollToSection('contact')">Contact</button>
+      } @else {
+        <a mat-button routerLink="/" (click)="closeMenu()" class="back-link">
+          <mat-icon>arrow_back</mat-icon> Back to Home
+        </a>
+      }
+    </nav>
+  }
+</header>

@@ -1,0 +1,32 @@
+<div class="modal-backdrop" (click)="onBackdropClick($event)">
+  <div class="modal-box" role="dialog" aria-modal="true">
+    <button class="close-btn" (click)="close()" aria-label="Close">
+      <mat-icon>close</mat-icon>
+    </button>
+
+    <button class="nav-btn prev" (click)="navigate(-1)" aria-label="Previous">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <div class="modal-image-wrap">
+      <img [src]="current.src" [alt]="current.alt" />
+      @if (current.caption) {
+        <p class="modal-caption">{{ current.caption }}</p>
+      }
+    </div>
+
+    <button class="nav-btn next" (click)="navigate(1)" aria-label="Next">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+
+    <div class="modal-dots">
+      @for (img of images; track $index) {
+        <span
+          class="dot"
+          [class.dot--active]="$index === currentIndex()"
+          (click)="currentIndex.set($index)"
+        ></span>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,280 @@
+// ============================================================
+// Shared project page styles — imported by each project component
+// ============================================================
+@use 'styles/variables' as v;
+@use 'styles/mixins' as m;
+
+// --- Hero ---
+.project-hero {
+  background: var(--bg-hero);
+  padding: 80px 20px 60px;
+}
+
+.project-hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  animation: heroFadeIn 0.8s ease 0.1s both;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.project-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.project-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  margin: 0 0 10px;
+}
+
+.project-tagline {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin: 0 0 16px;
+}
+
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.hero-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+// --- Section layout ---
+.project-section {
+  @include m.section-base;
+  background: var(--bg-darker);
+
+  &--alt { background: var(--bg-light); }
+}
+
+.section-inner {
+  @include m.section-inner;
+}
+
+.section-title {
+  @include m.section-title;
+}
+
+.section-subtitle {
+  @include m.section-subtitle;
+}
+
+.section-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// --- Feature grid ---
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  @include m.card-base;
+  appAnimateOnScroll: initial;
+
+  .feature-icon { font-size: 1.8rem; margin-bottom: 12px; }
+  .feature-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 8px;
+  }
+  .feature-desc {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+// --- Tech grid ---
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.tech-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-color);
+    margin: 0 0 12px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 16px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+}
+
+// --- Download cards ---
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.download-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+
+  h3 { color: var(--text-dark); font-size: 1.1rem; margin: 0; }
+  p  { color: var(--text-light); font-size: 0.875rem; margin: 0; }
+}
+
+// --- Support footer ---
+.support-block {
+  text-align: center;
+
+  p { color: var(--text-light); font-size: 0.9rem; margin: 0 0 20px; }
+}
+
+.support-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+// --- Screenshots ---
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.screenshot-thumb {
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .thumb-caption {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    background: var(--bg-white);
+  }
+
+  &:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+// --- Section CTA buttons ---
+.section-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+// --- Installation steps ---
+.install-steps {
+  max-width: 640px;
+  margin: 32px auto 0;
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+
+  li {
+    counter-increment: step;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    &::before {
+      content: counter(step);
+      min-width: 32px;
+      height: 32px;
+      background: var(--primary-color);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+  }
+}

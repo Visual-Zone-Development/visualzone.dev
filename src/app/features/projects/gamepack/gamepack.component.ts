@@ -44,9 +44,9 @@ export class GamepackComponent {
     },
     {
       src: 'assets/images/gamepack/wordplay.png',
-      alt: 'Word Play gameplay screen',
-      caption: 'Word Play',
-      title: 'Word Play',
+      alt: 'Code Words gameplay screen',
+      caption: 'Code Words',
+      title: 'Code Words',
       description:
         'A team-based word association game inspired by classic party game strategy.',
       width: 2144,
@@ -104,9 +104,9 @@ export class GamepackComponent {
     },
     {
       src: 'assets/images/gamepack/wordrush.png',
-      alt: 'Word Rush game screen',
-      caption: 'Word Rush',
-      title: 'Word Rush',
+      alt: 'Lingo game screen',
+      caption: 'Lingo',
+      title: 'Lingo',
       description:
         'Race to solve Wordle puzzles! Guess words in a free-for-all competition.',
       width: 2158,

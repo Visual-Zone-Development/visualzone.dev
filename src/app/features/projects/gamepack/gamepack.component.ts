@@ -33,6 +33,16 @@ export class GamepackComponent {
 
   readonly games: GamepackGame[] = [
     {
+      src: 'assets/images/gamepack/categories.png',
+      alt: 'Categories gameplay screen',
+      caption: 'Categories',
+      title: 'Categories',
+      description:
+        'Give clues to your teammates to guess as many words as possible in a given category.',
+      width: 2144,
+      height: 1352,
+    },
+    {
       src: 'assets/images/gamepack/wordplay.png',
       alt: 'Word Play gameplay screen',
       caption: 'Word Play',
@@ -48,7 +58,7 @@ export class GamepackComponent {
       caption: 'Guess A Sketch',
       title: 'Guess A Sketch',
       description:
-        'Draw fast, guess faster, and watch the chaos unfold in real time.',
+        'Compete head to head with other players to earn the most points guessing each other\'s sketches!',
       width: 2140,
       height: 1468,
     },
@@ -58,7 +68,7 @@ export class GamepackComponent {
       caption: 'Word Chain',
       title: 'Word Chain',
       description:
-        'Keep the chain alive with quick thinking and even quicker vocabulary.',
+        'Find as many words as you can in the alloted time.',
       width: 2144,
       height: 1352,
     },
@@ -68,7 +78,7 @@ export class GamepackComponent {
       caption: 'This or That',
       title: 'This or That',
       description:
-        'Vote through funny dilemmas and see how your room stacks up.',
+        'A social game to see what your friends would rather do.',
       width: 1280,
       height: 700,
     },
@@ -78,7 +88,7 @@ export class GamepackComponent {
       caption: 'Chess',
       title: 'Chess',
       description:
-        'A classic board game experience with live multiplayer and video chat.',
+        'A classic board game experience.',
       width: 1280,
       height: 700,
     },
@@ -88,7 +98,7 @@ export class GamepackComponent {
       caption: 'Spectrum',
       title: 'Spectrum',
       description:
-        'A colorful party challenge built around creative choices and group reactions.',
+        'One person sees a target on a spectrum. Give a clue. Others guess where it lands.',
       width: 2075,
       height: 1417,
     },
@@ -98,7 +108,7 @@ export class GamepackComponent {
       caption: 'Word Rush',
       title: 'Word Rush',
       description:
-        'Race against the clock to find as many words as you can before time runs out.',
+        'Race to solve Wordle puzzles! Guess words in a free-for-all competition.',
       width: 2158,
       height: 1484,
     },

@@ -43,7 +43,7 @@ export class GamepackComponent {
       height: 1352,
     },
     {
-      src: 'assets/images/gamepack/wordplay.png',
+      src: 'assets/images/gamepack/codewords.png',
       alt: 'Code Words gameplay screen',
       caption: 'Code Words',
       title: 'Code Words',
@@ -103,7 +103,7 @@ export class GamepackComponent {
       height: 1417,
     },
     {
-      src: 'assets/images/gamepack/wordrush.png',
+      src: 'assets/images/gamepack/lingo.png',
       alt: 'Lingo game screen',
       caption: 'Lingo',
       title: 'Lingo',

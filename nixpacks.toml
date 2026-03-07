@@ -1,2 +1,8 @@
 [phases.setup]
-nixPkgs = ["nodejs_22"]
+nixPkgs = ["nodejs_22", "nginx"]
+
+[phases.build]
+cmds = ["npm ci", "npm run build", "mkdir -p /etc/nginx"]
+
+[start]
+cmd = "envsubst '${PORT}' < /app/nginx.conf > /etc/nginx/nginx.conf && nginx -c /etc/nginx/nginx.conf -g 'daemon off;'"

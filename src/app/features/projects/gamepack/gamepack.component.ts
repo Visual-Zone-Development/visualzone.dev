@@ -112,6 +112,16 @@ export class GamepackComponent {
       width: 2158,
       height: 1484,
     },
+    {
+      src: 'assets/images/gamepack/tongue-tied.png',
+      alt: 'Tongue Tied game screen',
+      caption: 'Tongue Tied',
+      title: 'Tongue Tied',
+      description:
+        'Describe the word without saying the forbidden clues — watch your tongue!',
+      width: 2140,
+      height: 1470,
+    },
   ];
 
   readonly currentGame = computed(() => this.games[this.activeGameIndex()]);

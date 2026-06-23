@@ -2,18 +2,24 @@
   <div class="header-inner">
     <!-- Logo -->
     <a class="logo" routerLink="/" (click)="closeMenu()">
-      <img src="assets/images/vz-logo-pb.png" alt="Visual Zone Development logo" height="36" />
-      <span class="logo-text">Visual Zone Development</span>
+      <img src="assets/images/vz-logo-gold-white.png" alt="Visual Zone Development logo" height="36" />
+      <span class="logo-text">Visual<span class="logo-accent">Zone</span></span>
     </a>
 
     <!-- Desktop nav -->
     <nav class="desktop-nav">
       @if (isHome()) {
-        <button mat-button (click)="scrollToSection('home')">Home</button>
-        <button mat-button (click)="scrollToSection('projects')">Projects</button>
-        <button mat-button (click)="scrollToSection('contact')">Contact</button>
+        <button class="nav-link" (click)="scrollToSection('projects')">Projects</button>
+        <button class="nav-link" (click)="scrollToSection('new')">What's New</button>
+        <button class="nav-link" (click)="scrollToSection('contact')">Contact</button>
+        <a
+          class="nav-cta"
+          href="https://github.com/Visual-Zone-Development"
+          target="_blank"
+          rel="noopener"
+        >GitHub</a>
       } @else {
-        <a mat-button routerLink="/" class="back-link">
+        <a routerLink="/" class="nav-link back-link">
           <mat-icon>arrow_back</mat-icon> Back to Home
         </a>
       }
@@ -35,11 +41,18 @@
   @if (mobileOpen()) {
     <nav class="mobile-nav">
       @if (isHome()) {
-        <button mat-button (click)="scrollToSection('home')">Home</button>
-        <button mat-button (click)="scrollToSection('projects')">Projects</button>
-        <button mat-button (click)="scrollToSection('contact')">Contact</button>
+        <button class="nav-link" (click)="scrollToSection('projects')">Projects</button>
+        <button class="nav-link" (click)="scrollToSection('new')">What's New</button>
+        <button class="nav-link" (click)="scrollToSection('contact')">Contact</button>
+        <a
+          class="nav-cta"
+          href="https://github.com/Visual-Zone-Development"
+          target="_blank"
+          rel="noopener"
+          (click)="closeMenu()"
+        >GitHub</a>
       } @else {
-        <a mat-button routerLink="/" (click)="closeMenu()" class="back-link">
+        <a routerLink="/" (click)="closeMenu()" class="nav-link back-link">
           <mat-icon>arrow_back</mat-icon> Back to Home
         </a>
       }

@@ -4,38 +4,48 @@
 
 :root {
   // Brand colours
-  --primary-color: #0A9AE4;
-  --primary-dark: #0779B8;
-  --secondary-color: #6D28D9;
-  --secondary-dark: #4C1D95;
+  --primary-color: #F5B53D;   // gold
+  --primary-dark: #E0A322;
+  --secondary-color: #6E9BC4; // steel blue
+  --secondary-dark: #4F7BA3;
 
   // Text
-  --text-dark: #e5e7eb;
-  --text-light: #9ca3af;
+  --text-dark: #EAEEF7;
+  --text-light: #94A3C2;
+  --text-muted: #5D6B8A;
+  --text-on-accent: #0B0E16;
 
   // Backgrounds
-  --bg-white: #111827;
-  --bg-light: #1f2937;
-  --bg-darker: #0f172a;
-  --bg-hero: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  --bg-white: #121A2B;        // card / raised surface
+  --bg-light: #1A2438;        // chips / pills
+  --bg-darker: #0C111E;       // alternating sections
+  --bg-base: #0A0E1A;         // page background
+  --bg-hero: #0A0E1A;
 
   // Borders & shadows
-  --border-color: #374151;
+  --border-color: #2E3A52;
+  --border-subtle: rgba(255, 255, 255, 0.07);
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.45);
+
+  // Typography
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Hanken Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
   // Transitions
   --transition: all 0.3s ease;
 }
 
 // SCSS variables (for use inside Sass functions / interpolations)
-$primary:        #0A9AE4;
-$primary-dark:   #0779B8;
-$secondary:      #6D28D9;
-$secondary-dark: #4C1D95;
-$bg-darker:      #0f172a;
-$bg-white:       #111827;
-$bg-light:       #1f2937;
-$border-color:   #374151;
-$text-dark:      #e5e7eb;
-$text-light:     #9ca3af;
+$primary:        #F5B53D;
+$primary-dark:   #E0A322;
+$secondary:      #6E9BC4;
+$secondary-dark: #4F7BA3;
+$bg-base:        #0A0E1A;
+$bg-darker:      #0C111E;
+$bg-white:       #121A2B;
+$bg-light:       #1A2438;
+$border-color:   #2E3A52;
+$text-dark:      #EAEEF7;
+$text-light:     #94A3C2;

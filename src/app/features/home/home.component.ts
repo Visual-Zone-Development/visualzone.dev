@@ -1,46 +1,80 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { ProjectsService } from '../../shared/services/projects.service';
-import { ALL_CATEGORIES, ProjectCategory } from '../../shared/models/project.model';
+import { ALL_CATEGORIES, Project, ProjectCategory } from '../../shared/models/project.model';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
+
+interface Spotlight {
+  id: string;
+  title: string;
+  meta: string;
+  icon: string;
+  description: string;
+  tags: string[];
+}
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink,
-    MatChipsModule,
-    MatButtonModule,
-    MatIconModule,
-    AnimateOnScrollDirective,
-  ],
+  imports: [CommonModule, RouterLink, AnimateOnScrollDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   private projectsService = inject(ProjectsService);
 
-  readonly categories = ALL_CATEGORIES;
-  activeCategory = signal<ProjectCategory | null>(null);
+  /** "All" plus the real categories, for the filter chips. */
+  readonly filters: (ProjectCategory | 'All')[] = ['All', ...ALL_CATEGORIES];
+  activeFilter = signal<ProjectCategory | 'All'>('All');
 
-  filteredProjects = computed(() =>
-    this.projectsService.filterByCategory(this.activeCategory())
-  );
+  readonly projects = this.projectsService.projects;
 
-  setCategory(cat: ProjectCategory | null): void {
-    this.activeCategory.set(cat);
+  /** Marks used in the floating hero cluster. */
+  readonly heroCluster = this.projects.map(p => ({
+    id: p.id,
+    icon: p.heroIcon ?? p.icon,
+    title: p.title,
+  }));
+
+  filteredProjects = computed(() => {
+    const f = this.activeFilter();
+    return f === 'All'
+      ? this.projects
+      : this.projectsService.filterByCategory(f);
+  });
+
+  readonly spotlights: Spotlight[] = [
+    {
+      id: 'landfall',
+      title: 'Landfall',
+      meta: 'landfall.gg · ◷ COMING SOON',
+      icon: 'assets/images/landfall-logo.png',
+      description:
+        'Online Catan, taken seriously. Detailed stats and reporting, ranked leagues, bracketed tournaments, and team play — a competitive home for the settlers among us.',
+      tags: ['Leagues', 'Tournaments', 'Stats', 'Team Play'],
+    },
+    {
+      id: 'fullpress',
+      title: 'FullPress',
+      meta: '◷ COMING SOON',
+      icon: 'assets/images/fullpress-logo.png',
+      description:
+        "Your fantasy league deserves a newsroom. FullPress keeps a living history of every season and spins up AI-written articles about your matchups, rivalries, and champions — so the league feels as real as the real thing.",
+      tags: ['League History', 'AI Articles', 'Fantasy Sports'],
+    },
+  ];
+
+  /** External destination for a live project that has no internal detail page. */
+  primaryUrl(p: Project): string | undefined {
+    return (p.links.find(l => l.primary) ?? p.links[0])?.url;
   }
 
-  scrollToProjects(): void {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  setFilter(filter: ProjectCategory | 'All'): void {
+    this.activeFilter.set(filter);
   }
 
-  scrollToContact(): void {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  scrollTo(id: string): void {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
 }

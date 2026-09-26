@@ -48,7 +48,7 @@ export class HomeComponent {
     {
       id: 'landfall',
       title: 'Landfall',
-      meta: 'landfall.gg · ◷ COMING SOON',
+      meta: 'landfall.gg · LIVE',
       icon: 'assets/images/landfall-logo.png',
       description:
         'Online Catan, taken seriously. Detailed stats and reporting, ranked leagues, bracketed tournaments, and team play — a competitive home for the settlers among us.',
@@ -57,7 +57,7 @@ export class HomeComponent {
     {
       id: 'fullpress',
       title: 'FullPress',
-      meta: '◷ COMING SOON',
+      meta: 'fullpress.app · LIVE',
       icon: 'assets/images/fullpress-logo.png',
       description:
         "Your fantasy league deserves a newsroom. FullPress keeps a living history of every season and spins up AI-written articles about your matchups, rivalries, and champions — so the league feels as real as the real thing.",

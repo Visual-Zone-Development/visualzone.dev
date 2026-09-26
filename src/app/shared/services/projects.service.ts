@@ -131,17 +131,19 @@ export class ProjectsService {
       title: 'Landfall',
       tagline: 'Online Catan, taken seriously',
       description:
-        'Stats and reporting, ranked leagues, tournaments, and team play for competitive Catan. Launching soon at landfall.gg.',
+        'Stats and reporting, ranked leagues, tournaments, and team play for competitive Catan.',
       icon: 'assets/images/landfall-logo.png',
       tags: ['Catan', 'Leagues', 'Stats'],
       categories: ['Games & Play'],
       badges: [],
-      links: [],
+      links: [
+        { label: 'Visit Landfall', url: 'https://landfall.gg', primary: true },
+      ],
       hasChangelog: false,
       hasFeatures: false,
-      status: 'soon',
-      statusLabel: '◷ COMING SOON',
-      cardCta: 'Get notified →',
+      status: 'live',
+      statusLabel: 'LIVE',
+      cardCta: 'Play now →',
     },
     {
       id: 'fullpress',
@@ -153,12 +155,14 @@ export class ProjectsService {
       tags: ['Fantasy', 'AI Articles', 'History'],
       categories: ['Games & Play'],
       badges: [],
-      links: [],
+      links: [
+        { label: 'Visit FullPress', url: 'https://fullpress.app', primary: true },
+      ],
       hasChangelog: false,
       hasFeatures: false,
-      status: 'soon',
-      statusLabel: '◷ COMING SOON',
-      cardCta: 'Get notified →',
+      status: 'live',
+      statusLabel: 'LIVE',
+      cardCta: 'Visit FullPress →',
     },
   ];
 

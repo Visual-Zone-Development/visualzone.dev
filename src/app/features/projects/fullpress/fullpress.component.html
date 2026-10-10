@@ -1,0 +1,166 @@
+<!-- HERO -->
+<section class="project-hero">
+  <div class="project-hero-inner">
+    <img src="assets/images/fullpress-logo.png" alt="FullPress logo" class="project-icon" />
+    <h1 class="project-title">FullPress</h1>
+    <p class="project-tagline">Your Fantasy League, With a Newsroom</p>
+    <div class="hero-tags">
+      <span class="tag-pill">Web App</span>
+      <span class="tag-pill">Fantasy Sports</span>
+      <span class="tag-pill">AI Articles</span>
+      <span class="tag-pill">League History</span>
+    </div>
+    <div class="hero-actions">
+      <a href="https://fullpress.app" target="_blank" rel="noopener" class="btn-primary">
+        Visit FullPress
+      </a>
+      <a href="https://fullpress.app/demo" target="_blank" rel="noopener" class="btn-secondary">
+        Tour a Live League
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-lead">
+      FullPress turns your fantasy league into a story. Connect your basketball or football league
+      once and it keeps a permanent record book of every season, then files weekly recaps, power
+      rankings, trade breakdowns, and a live league feed — written automatically, in your league's
+      own voice. One commissioner sets it up; everyone in the league reads it free.
+    </p>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">A Look Inside</h2>
+    <p class="section-subtitle">
+      Screens from the live demo league — every page works just like it would for yours.
+    </p>
+
+    <app-screenshot-carousel [slides]="screenshots" />
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🔄</div>
+        <h3 class="feature-title">Syncs Your League</h3>
+        <p class="feature-desc">Connect Fantrax, Sleeper, Fleaflicker, MyFantasyLeague, or ESPN. Rosters, scores, and standings stay current.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">📰</div>
+        <h3 class="feature-title">Weekly Recaps</h3>
+        <p class="feature-desc">Every matchup written up from your real synced week — comebacks, blowouts, and the box score that mattered.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">📈</div>
+        <h3 class="feature-title">Power Rankings</h3>
+        <p class="feature-desc">Tiered weekly rankings with movement arrows and a hot take for every team.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🔁</div>
+        <h3 class="feature-title">Trade Desk</h3>
+        <p class="feature-desc">Category-aware report cards that grade both sides of every accepted trade.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🏆</div>
+        <h3 class="feature-title">The Record Book</h3>
+        <p class="feature-desc">Champions wall, all-time standings, honors, and franchise pages that follow each manager across seasons.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">💬</div>
+        <h3 class="feature-title">Live League Feed</h3>
+        <p class="feature-desc">AI analysts and fans post through the week, plus reactions and comments on every story.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🗓️</div>
+        <h3 class="feature-title">Content Studio</h3>
+        <p class="feature-desc">Set the publishing schedule, file a story on demand, and pick the author voices.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">📝</div>
+        <h3 class="feature-title">Waivers &amp; Drafts</h3>
+        <p class="feature-desc">Waiver roundups, draft previews and grades, keeper takes, and a league history primer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Pricing</h2>
+    <div class="download-grid">
+      <div class="download-card">
+        <h3>Free</h3>
+        <p>
+          Live scores, stats, rivalries, and the full record book for every league — plus your
+          first 5 stories free. No card required.
+        </p>
+        <a href="https://fullpress.app/setup" target="_blank" rel="noopener" class="btn-primary">
+          Get Started
+        </a>
+      </div>
+      <div class="download-card">
+        <h3>Recaps · $12/league/yr</h3>
+        <p>An AI recap of every week, written about your league's real games, with hourly syncs.</p>
+        <a href="https://fullpress.app/pricing" target="_blank" rel="noopener" class="btn-primary">
+          See Pricing
+        </a>
+      </div>
+      <div class="download-card">
+        <h3>Commissioner · $29/league/yr</h3>
+        <p>
+          The whole newsroom: recaps, rankings, trade breakdowns, the live feed, and the Content
+          Studio.
+        </p>
+        <a href="https://fullpress.app/pricing" target="_blank" rel="noopener" class="btn-primary">
+          See Pricing
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Technical Implementation</h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h4>Frontend</h4>
+        <ul>
+          <li>Server-rendered Blade</li>
+          <li>Vue 3 islands</li>
+          <li>Vite</li>
+        </ul>
+      </div>
+      <div class="tech-card">
+        <h4>Backend</h4>
+        <ul>
+          <li>Laravel (PHP 8.3)</li>
+          <li>PostgreSQL</li>
+          <li>Background queue workers</li>
+          <li>Scheduled syncs &amp; AI generation</li>
+        </ul>
+      </div>
+      <div class="tech-card">
+        <h4>Infrastructure</h4>
+        <ul>
+          <li>Docker</li>
+          <li>Railway</li>
+          <li>Supervisord</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

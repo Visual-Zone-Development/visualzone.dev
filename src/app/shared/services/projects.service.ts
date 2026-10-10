@@ -141,9 +141,10 @@ export class ProjectsService {
       ],
       hasChangelog: false,
       hasFeatures: false,
+      route: '/projects/landfall',
       status: 'live',
       statusLabel: 'LIVE',
-      cardCta: 'Play now →',
+      cardCta: 'Learn more →',
     },
     {
       id: 'fullpress',
@@ -160,9 +161,10 @@ export class ProjectsService {
       ],
       hasChangelog: false,
       hasFeatures: false,
+      route: '/projects/fullpress',
       status: 'live',
       statusLabel: 'LIVE',
-      cardCta: 'Visit FullPress →',
+      cardCta: 'Learn more →',
     },
   ];
 

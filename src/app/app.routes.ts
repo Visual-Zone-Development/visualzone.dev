@@ -57,6 +57,16 @@ export const routes: Routes = [
       import('./features/projects/gamepack/gamepack.component').then(m => m.GamepackComponent),
   },
   {
+    path: 'projects/landfall',
+    loadComponent: () =>
+      import('./features/projects/landfall/landfall.component').then(m => m.LandfallComponent),
+  },
+  {
+    path: 'projects/fullpress',
+    loadComponent: () =>
+      import('./features/projects/fullpress/fullpress.component').then(m => m.FullpressComponent),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

@@ -38,77 +38,7 @@
       Browse the GamePack lineup and preview each experience before jumping in.
     </p>
 
-    <div class="games-carousel" appAnimateOnScroll>
-      <div class="games-carousel__stage">
-        <button
-          type="button"
-          class="games-carousel__nav games-carousel__nav--prev"
-          aria-label="Show previous game"
-          (click)="showPreviousGame()"
-        >
-          ‹
-        </button>
-
-        @for (game of games; track game.src; let i = $index) {
-          @if (i === activeGameIndex()) {
-            <button
-              type="button"
-              class="games-carousel__image-button"
-              (click)="openModal(i)"
-              [attr.aria-label]="'Open ' + game.title + ' screenshot'"
-            >
-              <img
-                [ngSrc]="game.src"
-                [width]="game.width"
-                [height]="game.height"
-                [alt]="game.alt"
-                class="games-carousel__image"
-                priority
-              />
-              <span class="games-carousel__zoom">Click to enlarge</span>
-            </button>
-          }
-        }
-
-        <button
-          type="button"
-          class="games-carousel__nav games-carousel__nav--next"
-          aria-label="Show next game"
-          (click)="showNextGame()"
-        >
-          ›
-        </button>
-      </div>
-
-      <div class="games-carousel__content">
-        <p class="games-carousel__eyebrow">Featured game</p>
-        <h3 class="games-carousel__title">{{ currentGame().title }}</h3>
-        <p class="games-carousel__description">{{ currentGame().description }}</p>
-      </div>
-
-      <div class="games-carousel__thumbnails" aria-label="Select a game screenshot">
-        @for (game of games; track game.src; let index = $index) {
-          <button
-            type="button"
-            class="games-carousel__thumbnail"
-            [class.games-carousel__thumbnail--active]="index === activeGameIndex()"
-            [attr.aria-label]="'Show ' + game.title"
-            [attr.aria-pressed]="index === activeGameIndex()"
-            (click)="selectGame(index)"
-          >
-            <div class="games-carousel__thumbnail-img-wrap">
-              <img
-                [ngSrc]="game.src"
-                fill
-                [alt]="game.alt"
-                class="games-carousel__thumbnail-image"
-              />
-            </div>
-            <span class="games-carousel__thumbnail-title">{{ game.title }}</span>
-          </button>
-        }
-      </div>
-    </div>
+    <app-screenshot-carousel [slides]="games" eyebrow="Featured game" />
   </div>
 </section>
 
@@ -148,14 +78,6 @@
     </div>
   </div>
 </section>
-
-<!-- IMAGE MODAL -->
-@if (showModal()) {
-  <app-image-modal
-    [images]="games"
-    (closed)="onModalClosed()"
-  />
-}
 
 <!-- PLATFORM FEATURES -->
 <section class="project-section project-section--alt">

@@ -1,37 +1,20 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component, ViewChild, computed, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 import {
-  ImageModalComponent,
-  ModalImage,
-} from '../../../shared/components/image-modal/image-modal.component';
-
-interface GamepackGame extends ModalImage {
-  title: string;
-  description: string;
-  width: number;
-  height: number;
-}
+  CarouselSlide,
+  ScreenshotCarouselComponent,
+} from '../../../shared/components/screenshot-carousel/screenshot-carousel.component';
 
 @Component({
   selector: 'app-gamepack',
   standalone: true,
-  imports: [
-    CommonModule,
-    NgOptimizedImage,
-    AnimateOnScrollDirective,
-    ImageModalComponent,
-  ],
+  imports: [CommonModule, AnimateOnScrollDirective, ScreenshotCarouselComponent],
   templateUrl: './gamepack.component.html',
   styleUrl: './gamepack.component.scss',
 })
 export class GamepackComponent {
-  @ViewChild(ImageModalComponent) modal?: ImageModalComponent;
-
-  readonly activeGameIndex = signal(0);
-  readonly showModal = signal(false);
-
-  readonly games: GamepackGame[] = [
+  readonly games: CarouselSlide[] = [
     {
       src: 'assets/images/gamepack/categories.png',
       alt: 'Categories gameplay screen',
@@ -123,29 +106,4 @@ export class GamepackComponent {
       height: 1470,
     },
   ];
-
-  readonly currentGame = computed(() => this.games[this.activeGameIndex()]);
-
-  selectGame(index: number): void {
-    this.activeGameIndex.set(index);
-  }
-
-  showPreviousGame(): void {
-    this.activeGameIndex.update(
-      (index) => (index - 1 + this.games.length) % this.games.length,
-    );
-  }
-
-  showNextGame(): void {
-    this.activeGameIndex.update((index) => (index + 1) % this.games.length);
-  }
-
-  openModal(index: number): void {
-    this.showModal.set(true);
-    setTimeout(() => this.modal?.open(index));
-  }
-
-  onModalClosed(): void {
-    this.showModal.set(false);
-  }
 }

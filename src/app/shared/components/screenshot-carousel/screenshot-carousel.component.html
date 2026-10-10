@@ -1,0 +1,77 @@
+<div class="screenshot-carousel" appAnimateOnScroll>
+  <div class="screenshot-carousel__stage">
+    <button
+      type="button"
+      class="screenshot-carousel__nav screenshot-carousel__nav--prev"
+      aria-label="Show previous screenshot"
+      (click)="showPrevious()"
+    >
+      ‹
+    </button>
+
+    @for (slide of items(); track slide.src; let i = $index) {
+      @if (i === activeIndex()) {
+        <button
+          type="button"
+          class="screenshot-carousel__image-button"
+          (click)="openModal(i)"
+          [attr.aria-label]="'Open ' + slide.title + ' screenshot'"
+        >
+          <img
+            [ngSrc]="slide.src"
+            [width]="slide.width"
+            [height]="slide.height"
+            [alt]="slide.alt"
+            class="screenshot-carousel__image"
+            priority
+          />
+          <span class="screenshot-carousel__zoom">Click to enlarge</span>
+        </button>
+      }
+    }
+
+    <button
+      type="button"
+      class="screenshot-carousel__nav screenshot-carousel__nav--next"
+      aria-label="Show next screenshot"
+      (click)="showNext()"
+    >
+      ›
+    </button>
+  </div>
+
+  <div class="screenshot-carousel__content">
+    @if (eyebrow) {
+      <p class="screenshot-carousel__eyebrow">{{ eyebrow }}</p>
+    }
+    <h3 class="screenshot-carousel__title">{{ current().title }}</h3>
+    <p class="screenshot-carousel__description">{{ current().description }}</p>
+  </div>
+
+  <div class="screenshot-carousel__thumbnails" aria-label="Select a screenshot">
+    @for (slide of items(); track slide.src; let index = $index) {
+      <button
+        type="button"
+        class="screenshot-carousel__thumbnail"
+        [class.screenshot-carousel__thumbnail--active]="index === activeIndex()"
+        [attr.aria-label]="'Show ' + slide.title"
+        [attr.aria-pressed]="index === activeIndex()"
+        (click)="select(index)"
+      >
+        <div class="screenshot-carousel__thumbnail-img-wrap">
+          <img
+            [ngSrc]="slide.src"
+            fill
+            [alt]="slide.alt"
+            class="screenshot-carousel__thumbnail-image"
+          />
+        </div>
+        <span class="screenshot-carousel__thumbnail-title">{{ slide.title }}</span>
+      </button>
+    }
+  </div>
+</div>
+
+@if (showModal()) {
+  <app-image-modal [images]="items()" (closed)="onModalClosed()" />
+}

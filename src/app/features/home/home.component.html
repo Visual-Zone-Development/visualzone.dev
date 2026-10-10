@@ -23,7 +23,7 @@
           Explore our work
         </button>
         <button class="btn-outline" (click)="scrollTo('new')">
-          See what's coming →
+          See what's new →
         </button>
       </div>
     </div>
@@ -165,7 +165,7 @@
 
     <div class="spotlight-grid">
       @for (s of spotlights; track s.id) {
-        <div class="spotlight-card" appAnimateOnScroll>
+        <a class="spotlight-card" [routerLink]="'/projects/' + s.id" appAnimateOnScroll>
           <div class="spotlight-blob" aria-hidden="true"></div>
           <div class="spotlight-body">
             <div class="spotlight-head">
@@ -181,8 +181,9 @@
                 <span class="spotlight-tag">{{ tag }}</span>
               }
             </div>
+            <div class="spotlight-cta">Learn more →</div>
           </div>
-        </div>
+        </a>
       }
     </div>
   </div>

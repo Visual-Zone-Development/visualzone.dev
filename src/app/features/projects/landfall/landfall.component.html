@@ -1,0 +1,158 @@
+<!-- HERO -->
+<section class="project-hero">
+  <div class="project-hero-inner">
+    <img src="assets/images/landfall-logo.png" alt="Landfall logo" class="project-icon" />
+    <h1 class="project-title">Landfall</h1>
+    <p class="project-tagline">Online Catan, Taken Seriously</p>
+    <div class="hero-tags">
+      <span class="tag-pill">Web App</span>
+      <span class="tag-pill">Real-time</span>
+      <span class="tag-pill">Multiplayer</span>
+      <span class="tag-pill">Leagues &amp; Tournaments</span>
+    </div>
+    <div class="hero-actions">
+      <a href="https://landfall.gg" target="_blank" rel="noopener" class="btn-primary">
+        Play Landfall
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-lead">
+      Landfall is a home for competitive and casual Catan players alike. Open a room, send one
+      link, and you're rolling in under a minute — no account needed for guests. Play five game
+      modes, team up with a partner, and graduate to leagues and live tournament brackets with
+      detailed stats that remember who won last time.
+    </p>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">A Look Inside</h2>
+    <p class="section-subtitle">
+      From the first roll to the championship bracket.
+    </p>
+
+    <app-screenshot-carousel [slides]="screenshots" />
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🔗</div>
+        <h3 class="feature-title">One Link to Play</h3>
+        <p class="feature-desc">Share a room link or code. Friends join from phone, tablet, or laptop — guests welcome.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🧭</div>
+        <h3 class="feature-title">Five Game Modes</h3>
+        <p class="feature-desc">Classic, Seafarers, Cities &amp; Knights, Frontier, and Gods &amp; Kings — all free to play.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🤝</div>
+        <h3 class="feature-title">Team Play</h3>
+        <p class="feature-desc">Pair up and pool resources. Two heads, one hand of cards.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🏆</div>
+        <h3 class="feature-title">Leagues &amp; Tournaments</h3>
+        <p class="feature-desc">Seasons with standings and playoffs, plus live brackets that advance on their own.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">📊</div>
+        <h3 class="feature-title">Stats &amp; Replays</h3>
+        <p class="feature-desc">Performance reports for every player, and replays to scrub back to the turn it all went wrong.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🗺️</div>
+        <h3 class="feature-title">Board Builder</h3>
+        <p class="feature-desc">Design your own islands and custom rule sets, then host them for your group.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🤖</div>
+        <h3 class="feature-title">Bots</h3>
+        <p class="feature-desc">Short a player? Fill the seat with a bot and keep the game night going.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">👀</div>
+        <h3 class="feature-title">Spectating</h3>
+        <p class="feature-desc">Watch any live match without taking a seat — perfect for tournaments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Free to Play. Pro for the Big Stuff.</h2>
+    <div class="download-grid">
+      <div class="download-card">
+        <h3>Free</h3>
+        <p>
+          All standard game modes and boards, joining tournaments, spectating, and performance
+          reports.
+        </p>
+        <a href="https://landfall.gg/play" target="_blank" rel="noopener" class="btn-primary">
+          Start Playing
+        </a>
+      </div>
+      <div class="download-card">
+        <h3>Pro · $5/month</h3>
+        <p>
+          Host custom modes, tournaments, and leagues, build unlimited boards, and unlock game
+          replays. Starts with a free trial.
+        </p>
+        <a href="https://landfall.gg/pricing" target="_blank" rel="noopener" class="btn-primary">
+          See Pricing
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Technical Implementation</h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h4>Frontend</h4>
+        <ul>
+          <li>Angular + TypeScript</li>
+          <li>Angular Material + Tailwind CSS</li>
+          <li>NgRx Signal Store</li>
+          <li>SVG board rendering</li>
+          <li>Capacitor (iOS &amp; Android)</li>
+        </ul>
+      </div>
+      <div class="tech-card">
+        <h4>Backend</h4>
+        <ul>
+          <li>Laravel (PHP)</li>
+          <li>Laravel Reverb WebSockets</li>
+          <li>MySQL</li>
+          <li>Redis + queue workers</li>
+        </ul>
+      </div>
+      <div class="tech-card">
+        <h4>Infrastructure</h4>
+        <ul>
+          <li>Railway</li>
+          <li>Cloudflare</li>
+          <li>Playwright end-to-end tests</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

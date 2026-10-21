@@ -166,6 +166,26 @@ export class ProjectsService {
       statusLabel: 'LIVE',
       cardCta: 'Learn more →',
     },
+    {
+      id: 'pushplay',
+      title: 'PushPlay',
+      tagline: 'Push code. Press play.',
+      description:
+        'A controller-first game launcher for Steam Deck, Linux, Windows and Mac. Add games from GitHub, a folder or a website, and they update on their own when you push.',
+      icon: 'assets/images/pushplay/pushplay-icon.png',
+      tags: ['Steam Deck', 'Game Dev', 'GitHub'],
+      categories: ['Developer Tools', 'Games & Play'],
+      badges: [],
+      links: [
+        { label: 'Visit PushPlay', url: 'https://pushplay.gg', primary: true },
+      ],
+      hasChangelog: false,
+      hasFeatures: false,
+      route: '/projects/pushplay',
+      status: 'live',
+      statusLabel: 'LIVE',
+      cardCta: 'Learn more →',
+    },
   ];
 
   getById(id: string): Project | undefined {

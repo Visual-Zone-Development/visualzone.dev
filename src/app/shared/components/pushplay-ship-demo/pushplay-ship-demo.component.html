@@ -1,0 +1,48 @@
+<div class="demo" data-demo>
+  <figure class="stage" data-stage="1">
+    <div class="phone" aria-hidden="true">
+      <div class="phone-top">Claude · pushplay-games</div>
+      <div class="chat">
+        <p class="bubble you" data-prompt>{{ prompt }}</p>
+        <div class="bubble agent" data-reveal>
+          <p>On it: a brief, the game, its art, then a check.</p>
+          <ul>
+            @for (r of replies; track r) {
+              <li data-reveal><span class="tick">✓</span> {{ r }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="composer"><span>Reply…</span></div>
+    </div>
+    <figcaption><strong>1. Ask from your phone</strong> Claude Code, Codex, or any agent that can push.</figcaption>
+  </figure>
+
+  <span class="arrow" aria-hidden="true">→</span>
+
+  <figure class="stage" data-stage="2">
+    <div class="ci" aria-hidden="true">
+      <div class="ci-head">
+        <span class="status" data-status><span class="dot"></span><span data-status-text>Success</span></span>
+        <strong>Build games</strong>
+        <span class="muted">main · just now</span>
+      </div>
+      <ol>
+        @for (j of jobs; track j) {
+          <li data-job><span class="icon"></span>{{ j }}</li>
+        }
+      </ol>
+    </div>
+    <figcaption><strong>2. It’s built and checked</strong> Automatically, on every push, so a broken build never reaches you.</figcaption>
+  </figure>
+
+  <span class="arrow" aria-hidden="true">→</span>
+
+  <figure class="stage" data-stage="3">
+    <app-deck-frame src="assets/images/pushplay/library.webp" alt="PushPlay on a Steam Deck, with Neon Swarm newly in the library">
+      <img class="playing" data-playing src="assets/images/pushplay/playing.webp" alt="" width="1280" height="800" loading="lazy" decoding="async" />
+      <div class="toast" data-toast><span class="new">NEW</span> Neon Swarm added</div>
+    </app-deck-frame>
+    <figcaption><strong>3. It’s on your Deck</strong> PushPlay installs it on its own. Nothing to copy over or set up.</figcaption>
+  </figure>
+</div>

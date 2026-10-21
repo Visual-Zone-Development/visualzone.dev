@@ -67,6 +67,11 @@ export const routes: Routes = [
       import('./features/projects/fullpress/fullpress.component').then(m => m.FullpressComponent),
   },
   {
+    path: 'projects/pushplay',
+    loadComponent: () =>
+      import('./features/projects/pushplay/pushplay.component').then(m => m.PushplayComponent),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

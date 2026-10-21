@@ -1,0 +1,184 @@
+<!-- HERO -->
+<section class="project-hero">
+  <div class="project-hero-inner">
+    <img src="assets/images/pushplay/pushplay-icon.png" alt="PushPlay logo" class="project-icon" />
+    <h1 class="project-title">PushPlay</h1>
+    <p class="project-tagline">Push Code. Press Play.</p>
+    <div class="hero-tags">
+      <span class="tag-pill">Desktop App</span>
+      <span class="tag-pill">Steam Deck</span>
+      <span class="tag-pill">Game Dev</span>
+      <span class="tag-pill">GitHub</span>
+    </div>
+    <div class="hero-actions">
+      <a href="https://pushplay.gg/download" target="_blank" rel="noopener" class="btn-primary">
+        Install PushPlay
+      </a>
+      <a href="https://pushplay.gg" target="_blank" rel="noopener" class="btn-secondary">
+        Visit pushplay.gg
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-lead">
+      PushPlay is a controller-first game launcher for Steam Deck, Linux, Windows and Mac. Point it
+      at a GitHub repo, a folder, a .zip or a website and the game shows up in your library, then
+      updates on its own whenever you push. It's built for playtests, prototypes and the games you
+      make just for yourself, the ones that don't belong on a store.
+    </p>
+  </div>
+</section>
+
+<!-- ON THE DECK -->
+<section class="project-section">
+  <div class="section-inner">
+    <div class="deck-showcase">
+      <app-deck-frame
+        src="assets/images/pushplay/library.webp"
+        alt="PushPlay on a Steam Deck, showing the game library"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Describe a game. Play it on your Deck.</h2>
+    <p class="section-subtitle">
+      Ask a coding agent from your phone. Your repo builds and tests it on every push, and it lands
+      in your library ready to play.
+    </p>
+    <app-pushplay-ship-demo />
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">A Look Inside</h2>
+    <p class="section-subtitle">
+      Every screen is built for a controller and the Deck's 1280×800 display, and works just as well
+      with a keyboard.
+    </p>
+
+    <app-screenshot-carousel [slides]="screenshots" />
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🎮</div>
+        <h3 class="feature-title">Controller First</h3>
+        <p class="feature-desc">The whole launcher runs on the d-pad, with a pause menu in every web game. Keyboard and mouse work too.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🐙</div>
+        <h3 class="feature-title">Games From GitHub</h3>
+        <p class="feature-desc">Add your own repos, public ones, or any you can access. Releases you already publish just work.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🔄</div>
+        <h3 class="feature-title">Auto-Updates</h3>
+        <p class="feature-desc">Push a change and it's waiting next time you pick it up, never mid-game, with a roll back if it misbehaves.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">📦</div>
+        <h3 class="feature-title">Sideload Anything</h3>
+        <p class="feature-desc">Add a zip or folder from Downloads, an SD card or a USB drive, or play a hosted game website live.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Sign In By QR Code</h3>
+        <p class="feature-desc">Connect GitHub by scanning a code with your phone. No typing on the handheld.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🕹️</div>
+        <h3 class="feature-title">Web &amp; Native Games</h3>
+        <p class="feature-desc">Run browser games and native Godot builds side by side in the same library.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🏷️</div>
+        <h3 class="feature-title">Library Tools</h3>
+        <p class="feature-desc">Search, favorites, tags, filters and A–Z sorting keep a growing pile of prototypes manageable.</p>
+      </div>
+      <div class="feature-card" appAnimateOnScroll>
+        <div class="feature-icon">🤖</div>
+        <h3 class="feature-title">AI-Ready Template</h3>
+        <p class="feature-desc">A games repo template builds and tests every push, so a coding agent can ship a game straight to your Deck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="project-section">
+  <div class="section-inner">
+    <h2 class="section-title">Get PushPlay</h2>
+    <div class="download-grid">
+      <div class="download-card">
+        <h3>Steam Deck &amp; Linux</h3>
+        <p>One command in Desktop Mode downloads PushPlay and adds it to Steam, artwork and all.</p>
+        <a href="https://pushplay.gg/download#deck" target="_blank" rel="noopener" class="btn-primary">
+          Install
+        </a>
+      </div>
+      <div class="download-card">
+        <h3>Windows</h3>
+        <p>A one-click installer. Plug in a controller, or use the keyboard.</p>
+        <a href="https://pushplay.gg/download#windows" target="_blank" rel="noopener" class="btn-primary">
+          Download
+        </a>
+      </div>
+      <div class="download-card">
+        <h3>Mac</h3>
+        <p>Apple silicon and Intel. Handy for checking a game before it reaches the Deck.</p>
+        <a href="https://pushplay.gg/download#mac" target="_blank" rel="noopener" class="btn-primary">
+          Download
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL -->
+<section class="project-section project-section--alt">
+  <div class="section-inner">
+    <h2 class="section-title">Technical Implementation</h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h4>Launcher</h4>
+        <ul>
+          <li>Electron</li>
+          <li>React &amp; TypeScript</li>
+          <li>Linux AppImage, Windows &amp; Mac installers</li>
+        </ul>
+      </div>
+      <div class="tech-card">
+        <h4>Games</h4>
+        <ul>
+          <li>Web games and native Godot builds</li>
+          <li>GitHub Releases &amp; sideloading</li>
+          <li>Signed launcher updates</li>
+        </ul>
+      </div>
+      <div class="tech-card">
+        <h4>Website</h4>
+        <ul>
+          <li>Astro</li>
+          <li>Cloudflare Pages</li>
+          <li>Pages Functions for downloads</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

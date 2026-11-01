@@ -206,21 +206,6 @@
     object-fit: contain;
   }
 
-  &--soon {
-    width: 64px;
-    height: 64px;
-    border-radius: 18px;
-    background: #0F1626;
-    border: 1px dashed #3A4660;
-
-    img {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      opacity: 0.92;
-    }
-  }
-
   &--1 { top: 8%;  left: 14%;  animation: vzFloat 4s   ease-in-out infinite alternate; }
   &--2 { top: 4%;  right: 16%; animation: vzFloat 5s   ease-in-out 0.6s infinite alternate; }
   &--3 { bottom: 16%; left: 6%; animation: vzFloat 4.6s ease-in-out 0.3s infinite alternate; }
@@ -228,6 +213,7 @@
   &--5 { top: 46%; right: 2%;  animation: vzFloat 4.2s ease-in-out 1.2s infinite alternate; }
   &--6 { top: 42%; left: 0%;   animation: vzFloat 5s   ease-in-out 0.5s infinite alternate; }
   &--7 { bottom: 1%; left: 42%; animation: vzFloat 4.8s ease-in-out 0.8s infinite alternate; }
+  &--8 { top: -2%; left: 44%;  animation: vzFloat 5.2s ease-in-out 1.5s infinite alternate; }
 }
 
 // ============================================================

@@ -63,6 +63,15 @@ export class HomeComponent {
         "Your fantasy league deserves a newsroom. FullPress keeps a living history of every season and spins up AI-written articles about your matchups, rivalries, and champions — so the league feels as real as the real thing.",
       tags: ['League History', 'AI Articles', 'Fantasy Sports'],
     },
+    {
+      id: 'pushplay',
+      title: 'PushPlay',
+      meta: 'pushplay.gg · LIVE',
+      icon: 'assets/images/pushplay/pushplay-icon.png',
+      description:
+        'Push code. Press play. A controller-first game launcher for Steam Deck, Linux, Windows and Mac — add games from GitHub, a folder or a website, and they update on their own every time you push.',
+      tags: ['Steam Deck', 'Game Dev', 'GitHub'],
+    },
   ];
 
   /** External destination for a live project that has no internal detail page. */

@@ -10,7 +10,12 @@ export interface ProjectLink {
   primary?: boolean;
 }
 
-export type ProjectStatus = 'live' | 'soon';
+/**
+ * - `live`: running today; the card links to its detail page or its site.
+ * - `soon`: announced, not launched yet.
+ * - `retired`: no longer online. Still shown as past work, but never linked.
+ */
+export type ProjectStatus = 'live' | 'soon' | 'retired';
 
 export interface Project {
   id: string;
@@ -31,10 +36,10 @@ export interface Project {
   /** Internal detail-page route for live products; coming-soon products omit it. */
   route?: string;
   status: ProjectStatus;
-  /** Mono status pill shown on the card, e.g. "v6.4.1 · LIVE" or "◷ COMING SOON". */
+  /** Mono status pill shown on the card, e.g. "v6.4.1 · LIVE", "◷ COMING SOON" or "RETIRED". */
   statusLabel: string;
-  /** Card call-to-action label, e.g. "Download extension →". */
-  cardCta: string;
+  /** Card call-to-action label, e.g. "Download extension →". Retired projects have none. */
+  cardCta?: string;
 }
 
 export type ProjectCategory =

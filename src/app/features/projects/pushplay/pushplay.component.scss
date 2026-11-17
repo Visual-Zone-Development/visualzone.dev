@@ -1,6 +1,72 @@
 @use 'styles/project-page';
 
-.deck-showcase {
-  max-width: 900px;
+
+// PushPlay on every kind of screen at once: a laptop at the back, a tablet on the left,
+// the Steam Deck in front and a phone on the right. Positions are percentages of a fixed
+// 1000×700 stage so the composition holds at any width.
+.device-family {
+  position: relative;
+  max-width: 1000px;
   margin: 0 auto;
+  aspect-ratio: 1000 / 700;
+
+  > * { position: absolute; }
+
+  .df-laptop { left: 15%; top: 0; width: 70%; z-index: 1; }
+  .df-tablet { left: 0; top: 20%; width: 22%; z-index: 2; }
+  .df-deck   { left: 12%; top: 58%; width: 60%; z-index: 3; }
+  .df-phone  { left: 78%; top: 30%; width: 19%; z-index: 4; }
+
+  @media (max-width: 560px) {
+    aspect-ratio: 1000 / 820;
+
+    .df-laptop { left: 12%; width: 76%; }
+    .df-tablet { top: 22%; width: 26%; }
+    .df-deck   { left: 3%; top: 60%; width: 70%; }
+    .df-phone  { left: 70%; top: 28%; width: 28%; }
+  }
+}
+
+.screen-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 56px;
+}
+
+.screen-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 22px;
+
+  .screen-card__icon { font-size: 1.5rem; margin-bottom: 10px; }
+
+  h3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 8px;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 0;
+  }
+}
+
+.phone-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  max-width: 440px;
+  margin: 0 auto;
+
+  > :last-child { margin-top: 18%; }
 }

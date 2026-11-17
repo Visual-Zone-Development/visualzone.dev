@@ -111,6 +111,13 @@
               [ngTemplateOutletContext]="{ p: project }"
             />
           </a>
+        } @else if (project.status === 'retired') {
+          <article class="project-card project-card--retired" appAnimateOnScroll>
+            <ng-container
+              [ngTemplateOutlet]="cardBody"
+              [ngTemplateOutletContext]="{ p: project }"
+            />
+          </article>
         } @else {
           <button
             type="button"
@@ -151,7 +158,9 @@
       <span class="tag-pill">{{ tag }}</span>
     }
   </div>
-  <div class="card-cta">{{ p.cardCta }}</div>
+  @if (p.cardCta) {
+    <div class="card-cta">{{ p.cardCta }}</div>
+  }
 </ng-template>
 
 <!-- ============================================================ -->

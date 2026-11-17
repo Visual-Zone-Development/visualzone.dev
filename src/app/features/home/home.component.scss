@@ -290,6 +290,14 @@
     background: #0F1626;
     border: 1px dashed var(--border-color);
   }
+
+  // Past work that is no longer online: shown, but not a link, so it ignores the pointer
+  // (no hover lift, nothing to click).
+  &--retired {
+    background: #0F1626;
+    border: 1px solid var(--border-subtle);
+    pointer-events: none;
+  }
 }
 
 .card-head {

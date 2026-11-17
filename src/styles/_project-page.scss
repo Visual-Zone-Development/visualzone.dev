@@ -278,3 +278,143 @@
     }
   }
 }
+
+// --- Play anywhere: one row per kind of screen, art beside the copy ---
+.platform-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  margin-top: 8px;
+}
+
+.platform-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+
+  &--flip .platform-art { order: 2; }
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    &--flip .platform-art { order: 0; }
+  }
+}
+
+.platform-copy {
+  .platform-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin: 0 0 10px;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-dark);
+    margin: 0 0 12px;
+  }
+
+  p {
+    color: var(--text-light);
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin: 0 0 16px;
+  }
+
+  ul {
+    margin: 0 0 20px;
+    padding: 0 0 0 18px;
+    color: var(--text-light);
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+
+  .platform-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .platform-note {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  a.inline-link {
+    color: var(--primary-color);
+    font-weight: 600;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// Two devices overlapping: a big one at the back, a small one in front at the bottom right.
+.device-pair {
+  position: relative;
+  padding-bottom: 6%;
+
+  .device-back { width: 88%; }
+
+  .device-front {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: var(--front-width, 26%);
+  }
+}
+
+.soon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px dashed var(--border-color);
+  color: var(--secondary-color);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+// --- Compact "plays on" strip ---
+.platform-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+  margin-top: 72px;
+}
+
+.platform-chip {
+  background: var(--bg-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 16px;
+
+  .platform-chip__icon { font-size: 1.4rem; margin-bottom: 8px; }
+
+  .platform-chip__name {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--text-dark);
+    margin: 0 0 4px;
+  }
+
+  .platform-chip__desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    margin: 0;
+  }
+}

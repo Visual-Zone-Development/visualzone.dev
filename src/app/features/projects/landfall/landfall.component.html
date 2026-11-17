@@ -5,14 +5,18 @@
     <h1 class="project-title">Landfall</h1>
     <p class="project-tagline">Online Catan, Taken Seriously</p>
     <div class="hero-tags">
-      <span class="tag-pill">Web App</span>
-      <span class="tag-pill">Real-time</span>
-      <span class="tag-pill">Multiplayer</span>
+      <span class="tag-pill">Web</span>
+      <span class="tag-pill">iOS &amp; Android</span>
+      <span class="tag-pill">Steam Deck</span>
+      <span class="tag-pill">TV &amp; Shared Screen</span>
       <span class="tag-pill">Leagues &amp; Tournaments</span>
     </div>
     <div class="hero-actions">
       <a href="https://landfall.gg" target="_blank" rel="noopener" class="btn-primary">
         Play Landfall
+      </a>
+      <a [href]="googlePlayUrl" target="_blank" rel="noopener" class="btn-secondary">
+        Get it on Google Play
       </a>
     </div>
   </div>
@@ -26,8 +30,130 @@
       Landfall is a home for competitive and casual Catan players alike. Open a room, send one
       link, and you're rolling in under a minute — no account needed for guests. Play five game
       modes, team up with a partner, and graduate to leagues and live tournament brackets with
-      detailed stats that remember who won last time.
+      detailed stats that remember who won last time. It's one game on every screen: a laptop, the
+      phone apps, a Steam Deck, or the TV with everyone's hand on their own phone.
     </p>
+  </div>
+</section>
+
+<!-- PLAY ANYWHERE -->
+<section class="project-section project-section--alt" id="platforms">
+  <div class="section-inner">
+    <h2 class="section-title">Play It Anywhere</h2>
+    <p class="section-subtitle">
+      Same account, same games, same friends list, on whatever screen is closest.
+    </p>
+
+    <div class="platform-rows">
+      <!-- Shared screen -->
+      <div class="platform-row" appAnimateOnScroll>
+        <div class="platform-art">
+          <div class="device-pair" style="--front-width: 24%">
+            <app-device-frame
+              class="device-back"
+              kind="tv"
+              src="assets/images/landfall/shared-screen.webp"
+              alt="Landfall on a TV: the public board, whose turn it is, every player's score and a QR code to join"
+              [width]="1600"
+              [height]="1000"
+            />
+            <app-device-frame
+              class="device-front"
+              kind="phone"
+              src="assets/images/landfall/phone-hand.webp"
+              alt="A phone showing only that player's hand, the dice and the Build, Trade and End turn buttons"
+              [width]="780"
+              [height]="1688"
+            />
+          </div>
+        </div>
+        <div class="platform-copy">
+          <p class="platform-eyebrow">TV &amp; Shared Screen</p>
+          <h3>The board on the TV. Your hand on your phone.</h3>
+          <p>
+            Turn the living room into the table. Open the shared screen on a TV, a projector or a
+            laptop plugged into one, and everyone scans the QR code to take a seat from their own
+            phone.
+          </p>
+          <ul>
+            <li>The TV shows the island, the dice, the scores and the log</li>
+            <li>Each phone shows only that player's cards, and takes their turn</li>
+            <li>Nothing secret ever reaches the big screen</li>
+          </ul>
+          <p class="platform-note">Open landfall.gg/tv on the TV to start.</p>
+        </div>
+      </div>
+
+      <!-- Phones & tablets -->
+      <div class="platform-row platform-row--flip" appAnimateOnScroll>
+        <div class="platform-art">
+          <div class="device-pair" style="--front-width: 27%">
+            <app-device-frame
+              class="device-back"
+              kind="tablet"
+              src="assets/images/landfall/tablet-board.webp"
+              alt="Landfall on a tablet: player strip, the full board and the card dock"
+              [width]="1600"
+              [height]="1200"
+            />
+            <app-device-frame
+              class="device-front"
+              kind="phone"
+              src="assets/images/landfall/phone-board.webp"
+              alt="Landfall on a phone: the board with a compact dock of cards and actions"
+              [width]="780"
+              [height]="1688"
+            />
+          </div>
+        </div>
+        <div class="platform-copy">
+          <p class="platform-eyebrow">iOS &amp; Android Apps</p>
+          <h3>The whole table in your pocket.</h3>
+          <p>
+            Native apps for phones and tablets, with a board you can pinch, pan and tap, and turn
+            alerts when it's your move. Your account, games and friends follow you between
+            devices, and any phone or tablet browser plays the same game with nothing to install.
+          </p>
+          <div class="platform-actions">
+            <a [href]="googlePlayUrl" target="_blank" rel="noopener" class="btn-primary">
+              Get it on Google Play
+            </a>
+            <span class="soon-pill">App Store · coming soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Steam Deck -->
+      <div class="platform-row" appAnimateOnScroll>
+        <div class="platform-art">
+          <app-deck-frame
+            src="assets/images/landfall/steam-deck.webp"
+            alt="Landfall on a Steam Deck: a side panel with players, the turn, resource cards and actions beside a full-height board"
+          />
+        </div>
+        <div class="platform-copy">
+          <p class="platform-eyebrow">Steam Deck &amp; Handhelds</p>
+          <h3>Couch Catan with a controller.</h3>
+          <p>
+            A layout made for the Deck's screen, with every action on the buttons: build, trade
+            and end your turn without touching the screen. Landfall comes to the Deck through
+            <a routerLink="/projects/pushplay" class="inline-link">PushPlay</a>, and a gamepad
+            plugged into any computer takes a seat the same way.
+          </p>
+          <p class="platform-note">Steam Deck, Legion Go and other handhelds.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-strip">
+      @for (platform of platforms; track platform.name) {
+        <div class="platform-chip">
+          <div class="platform-chip__icon" aria-hidden="true">{{ platform.icon }}</div>
+          <p class="platform-chip__name">{{ platform.name }}</p>
+          <p class="platform-chip__desc">{{ platform.description }}</p>
+        </div>
+      }
+    </div>
   </div>
 </section>
 
@@ -51,7 +177,7 @@
       <div class="feature-card" appAnimateOnScroll>
         <div class="feature-icon">🔗</div>
         <h3 class="feature-title">One Link to Play</h3>
-        <p class="feature-desc">Share a room link or code. Friends join from phone, tablet, or laptop — guests welcome.</p>
+        <p class="feature-desc">Share a room link, code or QR. Friends join from phone, tablet, laptop or the couch — guests welcome.</p>
       </div>
       <div class="feature-card" appAnimateOnScroll>
         <div class="feature-icon">🧭</div>
@@ -133,7 +259,8 @@
           <li>Angular Material + Tailwind CSS</li>
           <li>NgRx Signal Store</li>
           <li>SVG board rendering</li>
-          <li>Capacitor (iOS &amp; Android)</li>
+          <li>Capacitor (iOS &amp; Android apps)</li>
+          <li>Gamepad input for handhelds &amp; TVs</li>
         </ul>
       </div>
       <div class="tech-card">

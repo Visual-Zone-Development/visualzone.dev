@@ -114,26 +114,24 @@ export class ProjectsService {
       description:
         'Spin for a random conference and era, then draft the best 5-man college basketball roster you can. Multiple game modes and shareable seeds to challenge your friends.',
       icon: 'assets/images/ranked-one/ranked-one-icon.svg',
-      tags: ['College Basketball', 'Free', 'Web App'],
+      tags: ['College Basketball', 'Web App'],
       categories: ['Games & Play'],
       badges: [],
-      links: [
-        { label: 'Play Ranked One', url: 'https://ranked-one.com', primary: true },
-      ],
+      // The site is offline: keep the card as past work, with nothing to click through to.
+      links: [],
       hasChangelog: false,
       hasFeatures: false,
-      status: 'live',
-      statusLabel: 'LIVE',
-      cardCta: 'Play now →',
+      status: 'retired',
+      statusLabel: 'RETIRED',
     },
     {
       id: 'landfall',
       title: 'Landfall',
       tagline: 'Online Catan, taken seriously',
       description:
-        'Stats and reporting, ranked leagues, tournaments, and team play for competitive Catan.',
+        'Leagues, tournaments, team play and stats for competitive Catan. Play in the browser, on the iOS and Android apps, on a Steam Deck, or with the board on the TV and your hand on your phone.',
       icon: 'assets/images/landfall-logo.png',
-      tags: ['Catan', 'Leagues', 'Stats'],
+      tags: ['Catan', 'Mobile Apps', 'TV & Steam Deck'],
       categories: ['Games & Play'],
       badges: [],
       links: [
@@ -171,9 +169,9 @@ export class ProjectsService {
       title: 'PushPlay',
       tagline: 'Push code. Press play.',
       description:
-        'A controller-first game launcher for Steam Deck, Linux, Windows and Mac. Add games from GitHub, a folder or a website, and they update on their own when you push.',
+        'Your games on every screen: Steam Deck, Windows, Mac and Linux, with a phone and tablet app on the way. Add games from GitHub, a folder or a website, and they update on their own when you push.',
       icon: 'assets/images/pushplay/pushplay-icon.png',
-      tags: ['Steam Deck', 'Game Dev', 'GitHub'],
+      tags: ['Steam Deck', 'Desktop', 'Mobile'],
       categories: ['Developer Tools', 'Games & Play'],
       badges: [],
       links: [

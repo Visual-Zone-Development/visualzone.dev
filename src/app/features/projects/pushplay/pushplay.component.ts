@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 import { DeckFrameComponent } from '../../../shared/components/deck-frame/deck-frame.component';
+import { DeviceFrameComponent } from '../../../shared/components/device-frame/device-frame.component';
 import { PushplayShipDemoComponent } from '../../../shared/components/pushplay-ship-demo/pushplay-ship-demo.component';
 import {
   CarouselSlide,
@@ -11,7 +12,14 @@ import {
 @Component({
   selector: 'app-pushplay',
   standalone: true,
-  imports: [CommonModule, AnimateOnScrollDirective, ScreenshotCarouselComponent, DeckFrameComponent, PushplayShipDemoComponent],
+  imports: [
+    CommonModule,
+    AnimateOnScrollDirective,
+    ScreenshotCarouselComponent,
+    DeckFrameComponent,
+    DeviceFrameComponent,
+    PushplayShipDemoComponent,
+  ],
   templateUrl: './pushplay.component.html',
   styleUrl: './pushplay.component.scss',
 })
@@ -49,7 +57,7 @@ export class PushplayComponent {
     },
     {
       src: 'assets/images/pushplay/playing.webp',
-      alt: 'A neon twin-stick shooter being played full screen',
+      alt: 'Neon Swarm, a neon twin-stick shooter, being played full screen',
       caption: 'Playing',
       title: 'Playing',
       description: 'Web games and native builds, full screen and controller-first.',

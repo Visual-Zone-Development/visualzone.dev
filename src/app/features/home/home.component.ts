@@ -51,8 +51,8 @@ export class HomeComponent {
       meta: 'landfall.gg · LIVE',
       icon: 'assets/images/landfall-logo.png',
       description:
-        'Online Catan, taken seriously. Detailed stats and reporting, ranked leagues, bracketed tournaments, and team play — a competitive home for the settlers among us.',
-      tags: ['Leagues', 'Tournaments', 'Stats', 'Team Play'],
+        'Online Catan, taken seriously. Leagues, tournaments, team play and detailed stats, on the web, the iOS and Android apps and the Steam Deck. Put the board on the TV and everyone plays their hand from their phone.',
+      tags: ['Leagues', 'Tournaments', 'Mobile Apps', 'TV Mode'],
     },
     {
       id: 'fullpress',
@@ -69,8 +69,8 @@ export class HomeComponent {
       meta: 'pushplay.gg · LIVE',
       icon: 'assets/images/pushplay/pushplay-icon.png',
       description:
-        'Push code. Press play. A controller-first game launcher for Steam Deck, Linux, Windows and Mac — add games from GitHub, a folder or a website, and they update on their own every time you push.',
-      tags: ['Steam Deck', 'Game Dev', 'GitHub'],
+        'Push code. Press play. Your games on every screen you play on: Steam Deck, Windows, Mac and Linux, with a phone and tablet app on the way. Add games from GitHub, a folder or a website, and they update on their own every time you push.',
+      tags: ['Steam Deck', 'Desktop', 'Mobile', 'Game Dev'],
     },
   ];
 
